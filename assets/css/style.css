@@ -1,19 +1,271 @@
 
+
 body {
-    margin: 0;
+    margin: 10;
+    padding: 100px 10px 10px 10px;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0;
-    overflow: hidden;
-    font-family: Arial, sans-serif;
+    background-color:rgb(208, 171, 226);
+    overflow: auto;
+    font-family: IBM Plex Mono;
 }
 
-.center-text {
-    position: relative;
-    font-size: 3rem;
+.title1 {
+    margin: 10px;
+    padding: 0px 20px;
+    font-weight: normal;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 120px;
+    line-height: 0.6em;
+    color: azure;
+}
+.title2 {
+    margin: 10px;
+    padding: 0px 20px;
+    font-weight: normal;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 120px;
+    line-height: 0.6em;
+    color: azure;
+}
+.title3 {
+    margin: 10px;
+    padding: 0px 20px;
+    font-weight: normal;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 120px;
+    line-height: 0.6em;
+    color: azure;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    display: inline-block;
+    position: relative; 
+  }
+  
+.aboutbox {
+    position: fixed;
+   left:0px;
+   top:0px;
+    width: 30px;
+    height: 200px;
+    flex-wrap: nowrap;
+    background-color: black;
+    flex-direction: row;
+    z-index: 1;
+    
+}
+
+.linkbox {
+    position: fixed;
+   left: 1410px;
+   top:550px;
+    width: 30px;
+    height: 200px;
+    flex-wrap: nowrap;
+    background-color: black;
+    flex-direction: row;
+    z-index: 1;
+    
+}
+
+.grandparent {
+    background-color: black;
+    width: 70vw;
+    height: 100vh;
+    margin: 40px;
+    line-height: 50px;
+    overflow: auto;
+    transform: rotate(-1deg);
+   }
+
+   .parent {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color:black;
+    flex-direction: row;
+    justify-content:space-between;
+    z-index: 0;
+    overflow-y:scroll 
+}
+
+
+.child-container1 {
+    background-color: black;
+    width: 50vw;
+    height: 50vh;
+    margin: 1px;
     text-align: center;
-    color: #333;
+    line-height: 50px;
+    font-size: 10px;
+    overflow: auto;
+  }
+
+.child-container2 {
+    background-color: white;
+    width: 50vw;
+    height: 50vh;
+    margin: 1px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 10px;
+    overflow: auto;
+  }
+  
+  .hidden-child {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .child-container2:hover .hidden-child {
+    opacity: 1
+  }
+
+  .ovalcontainer {
+
+  }
+
+  .ibm-plex-mono-regular {
+    font-family: "IBM Plex Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  h1 {
+    margin: 10px;
+  padding: 0px 20px;
+  font-weight: normal;
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 120px;
+  line-height: 0.6em;
 }
 
+  h2 {
+    margin: 10px;
+  padding: 0px 20px;
+  font-weight: normal;
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 60px;
+  line-height: 0.6em;
+}
+
+h3 {
+    margin: 10px;
+  padding: 0px 20px;
+  font-weight: normal;
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 25px;
+  line-height: 0.8em;
+}
+
+  h4 {
+    margin: 0px;
+  padding: 10px 10px 15px 0px;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  transform: rotate(90deg); /* Dreht den Text */
+  z-index: 1;
+  color: aliceblue;
+}
+   h6 {
+    margin: 0px;
+    padding: 10px 10px 15px 0px;
+    font-weight: normal;
+    font-size: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 1;
+    color: aliceblue;
+}
+
+
+
+
+
+.crossword {
+    display: grid;
+    grid-template-columns: repeat(15, 65px);
+    grid-auto-rows: 65px;
+    gap: 0px;
+}
+
+.cell {
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    position: relative;
+}
+
+.cell.hidden {
+    background-color: black;
+}
+
+.letter {
+    font-size: 2rem;
+    font-weight: bold;
+    color: transparent;
+    transition: color 0.2s;
+    opacity: 0;
+}
+
+.cell:hover .letter,
+.cell.revealed .letter {
+    color: black;
+    opacity: 1
+}
+
+
+
+
+.flying-underscores {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.underscore {
+    position: absolute;
+    font-size: 1rem;
+    color: transparent;
+    white-space: nowrap;
+    animation: fillText 4s ease-in-out forwards, moveAround 8s infinite linear;
+}
+
+@keyframes fillText {
+    0% {
+        color: transparent;
+    }
+    100% {
+        color: #333;
+    }
+}
+
+@keyframes moveAround {
+    0% {
+        transform: translate(0, 0) rotate(0);
+    }
+    100% {
+        transform: translate(calc(100vw - 50%), calc(100vh - 50%)) rotate(360deg);
+    }
+}
