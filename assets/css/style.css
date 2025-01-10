@@ -6,14 +6,13 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
     background-color:rgb(233, 167, 238);
     overflow: auto;
     font-family: "IBM Plex Mono";
 }
 
 .title1 {
-    font-family: OffBitTrial-101, IBM Plex Mono;
+    font-family: "OffBitTrial-101", "IBM Plex Mono";
     margin: 50px;
     padding: 0px 0px;
     font-weight: normal;
@@ -25,7 +24,7 @@ body {
 }
 
 .title2 {
-    font-family: OffBitTrial-101, IBM Plex Mono;
+    font-family: "OffBitTrial-101", "IBM Plex Mono";
     margin: 50px;
     padding: 0px 0px;
     font-weight: normal;
@@ -38,7 +37,7 @@ body {
 }
 
 .title3 {
-    font-family: OffBitTrial-101, IBM Plex Mono;
+    font-family: "OffBitTrial-101", "IBM Plex Mono";
     margin: 50px;
     padding: 0px 0px;
     font-weight: normal;
@@ -52,8 +51,8 @@ body {
 
 .aboutbox {
     position: fixed;
-   left:0px;
-   top:0px;
+    left:0px;
+    top:0px;
     width: 30px;
     height: 200px;
     flex-wrap: nowrap;
@@ -140,7 +139,7 @@ body {
     background-color: white;
     flex-direction: row;
     padding-left: 20px;
-    padding-top: 20px;
+    
 
 }
 
@@ -209,7 +208,6 @@ img {
     font-style: normal;
   }
 
-
   .navigation {
     display: flex;
     position: fixed;
@@ -217,30 +215,35 @@ img {
     top: 10px; 
   }
 
+  .navi-items {
+    padding-left: 50px;
+    padding-right: 50px;
+    width:50vw
+  }
+
   .random-gallery {
     position: relative;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    bottom: 0px
   }
 
   .gallery-item {
     position: absolute;
-  
-    /* Zufällige Positionierung */
-    top: calc(10% + 80% * var(--random-y, 0));
-    left: calc(10% + 80% * var(--random-x, 0));
-  
     display: flex;
     flex-direction: column;
-    align-items: center;
     cursor: grab;
+    bottom: 20px;
+    right: 20px
   }
 
   .gallery-item:active {
     cursor: grabbing;
   }
 
+
+  
   h1 {
     margin: 10px;
   padding: 0px 20px;
@@ -252,20 +255,20 @@ img {
 }
 
   h2 {
-    margin: 10px;
-  padding: 0px 20px;
+  
+  padding-left: 20px;
   font-weight: normal;
-  text-align: right;
+  text-align: left;
   text-transform: uppercase;
   font-size: 40px;
   line-height: 1em;
 }
 
 h3 {
-    margin: 10px;
-  padding: 0px 20px;
+
+  padding-left: 20px;
   font-weight: normal;
-  text-align: right;
+  text-align: left;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 1.15em;
@@ -294,6 +297,14 @@ h3 {
     color: aliceblue;
 }
 
+p {
+  margin: 10px;
+  padding: 0px 20px;
+  font-weight: normal;
+  text-align:left;
+  font-size: 12px;
+  line-height: 1.15em;
+}
 
 .crossword:hover {
     cursor: crosshair;
