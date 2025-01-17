@@ -24,6 +24,20 @@ body {
     color: azure;
 }
 
+@media (max-width: 780px) {
+  .title1 {
+    display: flex;  
+    font-family: "OffBitTrial-101", "IBM Plex Mono";
+      margin: 25px;
+      padding: 0px 0px;
+      font-weight: normal;
+      text-align: left;
+      text-transform: uppercase;
+      font-size: 150px;
+      line-height: 1em;
+      color: azure;
+  }
+}  
 .title2 {
     font-family: "OffBitTrial-101", "IBM Plex Mono";
     margin: 50px;
@@ -36,6 +50,21 @@ body {
     color: azure;
     z-index: 1;
 }
+
+@media (max-width: 780px) {
+  .title2 {
+    display: flex;  
+    font-family: "OffBitTrial-101", "IBM Plex Mono";
+      margin: 25px;
+      padding: 0px 0px;
+      font-weight: normal;
+      text-align: right;
+      text-transform: uppercase;
+      font-size: 150px;
+      line-height: -1em;
+      color: azure;
+  }
+}  
 
 .title3 {
     font-family: "OffBitTrial-101", "IBM Plex Mono";
@@ -50,6 +79,77 @@ body {
     z-index: 1;
 }
 
+@media (max-width: 780px) {
+  .title3 {
+    display: flex;  
+    font-family: "OffBitTrial-101", "IBM Plex Mono";
+      margin: 25px;
+      padding: 0px 0px;
+      font-weight: normal;
+      text-align: right;
+      text-transform: uppercase;
+      font-size: 200px;
+      line-height: 1em;
+      color: azure;
+  }
+}  
+
+.initial1 {
+  display: flex;  
+  font-family: "OffBitTrial-101", "IBM Plex Mono";
+    margin: 50px;
+    padding: 0px 0px;
+    font-weight: normal;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 300px;
+    line-height: 0.6em;
+    color: azure;
+}
+
+@media (max-width: 780px) {
+  .initial1 {
+    display: flex;  
+    font-family: "OffBitTrial-101", "IBM Plex Mono";
+      margin: 25px;
+      padding: 0px 0px;
+      font-weight: normal;
+      text-align: left;
+      text-transform: uppercase;
+      font-size: 150px;
+      line-height: 1em;
+      color: azure;
+  }
+}  
+.initial2 {
+    font-family: "OffBitTrial-101", "IBM Plex Mono";
+    margin: 50px;
+    padding: 0px 0px;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 300px;
+    line-height: -1em;
+    color: azure;
+    z-index: 1;
+}
+
+@media (max-width: 780px) {
+  .initial2 {
+    display: flex;  
+    font-family: "OffBitTrial-101", "IBM Plex Mono";
+      margin: 25px;
+      padding: 0px 0px;
+      font-weight: normal;
+      text-align: right;
+      text-transform: uppercase;
+      font-size: 150px;
+      line-height: -1em;
+      color: azure;
+  }
+}  
+
+
 .aboutbox {
     position: fixed;
     left:0px;
@@ -57,10 +157,11 @@ body {
     width: 30px;
     height: 200px;
     flex-wrap: nowrap;
-    background-color:rgb(60, 40, 244) ; 
+    background-color:rgb(60, 40, 244) ;
+    box-shadow: 5px 2px 10px 0px azure;; 
     flex-direction: row;
     z-index: 1;
-    border-radius: 0px 0px 25px 0%;
+    border-radius: 0px 0px 15px 0%;
     
 }
 
@@ -72,9 +173,10 @@ body {
     height: 200px;
     flex-wrap: nowrap;
     background-color: rgb(60, 40, 244) ;
+    box-shadow: 0px 0px 10px 4px azure;; 
     flex-direction: row;
     z-index: 1;
-    border-radius: 25px 0px 0px 0px;
+    border-radius: 15px 0px 0px 0px;
     
 }
 
@@ -85,7 +187,7 @@ body {
     margin: 10px;
     line-height: 50px;
     overflow: auto;
-    transform: rotate(-1deg);
+    transform: rotate(0deg);
     
    }
 
@@ -97,20 +199,20 @@ body {
     justify-content:space-between;
     z-index: 0;
     overflow-y:scroll 
+    
 }
-
 
 .child-container1 {
     background-color: rgb(60, 40, 244);
-    width: 50vw;
-    height: 40vh;
+    width: 80vw;
+    height: 60vh;
     margin: 1px;
     text-align: center;
     line-height: 50px;
     font-size: 10px;
     overflow:hidden;
+    
   }
-
 
 .child-container2 {
     background-color:azure;
@@ -123,9 +225,10 @@ body {
     line-height: 50px;
     font-size: 10px;
     overflow: auto;
+    border-radius: 0px 25px 0px 0px;
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 780px) {
     .parent {
         flex-direction: column; /* Flexbox-Anordnung vertikal */
         justify-content: center; /* Zentriert die Container */
@@ -134,14 +237,20 @@ body {
 
     .child-container1 {
         width: 90vw; /* Breite anpassen für kleinere Bildschirme */
-        margin: 10px 0; /* Vertikaler Abstand */
+        margin: 0px 0; /* Vertikaler Abstand */
         order: 1; /* Child-Container 1 immer zuerst */
+        overflow: hidden;
+        border-radius: 0px 0px 0px 0px;
+        
     }
 
     .child-container2 {
         width: 90vw; /* Breite anpassen für kleinere Bildschirme */
-        margin: 10px 0; /* Vertikaler Abstand */
+        margin: 0px 0; /* Vertikaler Abstand */
         order: 2; /* Child-Container 2 immer nach Container 1 */
+        overflow: hidden;
+        border-radius: 0px 0px 0px 0px;
+        
     }
 }
 
@@ -166,12 +275,10 @@ body {
     flex-direction: row;
     padding-left: 20px;
     
-
 }
 
 img {
     width: 250px;
-    width: 3fr;
   }
 
   .imgcredit {
@@ -181,10 +288,15 @@ img {
     font-size: 10px;
     text-transform: lowercase;
     line-height: 1em;
-    transform: rotate(-25deg); /* Dreht den Text */
+    transform: rotate(0deg); /* Dreht den Text */
     z-index: 1;
     color: rgb(60, 40, 244);
+    opacity: 0
   } 
+
+  .imgcredit:hover {
+    opacity: 1;
+  }
 
   .button {
     border-radius: 25px;
@@ -271,6 +383,14 @@ img {
   break-inside: avoid; /* Verhindert, dass das Bild zwischen zwei Spalten geteilt wird */
 }
 
+ a {
+            text-decoration: none; /* Entfernt den Unterstrich */
+            color: azure; /* Optionale Farbe für den Link */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Optional: Unterstrich beim Hover */
+        }
   
   h1 {
     margin: 10px;
@@ -284,7 +404,7 @@ img {
 }
 
   h2 {
-  
+  font-family: "OffBitTrial-101";
   padding-left: 20px;
   font-weight: normal;
   text-align: left;
@@ -352,10 +472,10 @@ p {
 
 .crossword {
     display: grid;
-    grid-template-columns: repeat(15, 65px);
-    grid-auto-rows: 65px;
+    grid-template-columns: repeat(15, 60px);
+    grid-auto-rows: 85px;
     gap: 0px;
-    margin: 10px;
+    margin: 0px;
 }
 @media (max-width: 768px) {
   .crossword {
@@ -367,30 +487,33 @@ p {
 }
 
 .cell {
-    width: 70px;
-    height: 70px;
-    border: 1px solid rgb(60, 40, 244) ;
+    width: 60px;
+    height: 85px;
+    border: 3px solid rgb(60, 40, 244) ;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: azure;
     position: relative;
+    border-radius: 15px 0px 0px 0px;
     
 }
 
 .cell.hidden {
     background-color:rgb(60, 40, 244);
+    border-radius: 0px 0px 0px 0px;
 }
-
-
 
 .letter {
   font-size: 2rem;
+  font-family: "OffBitTrial-101";
+  color: rgb(60, 40, 244);
   font-weight: bold;
   color: transparent;
   opacity: 0;
   transition: color 0.2s, opacity 0.2s;
 }
+
 .cell:active .letter {
   color: rgb(60, 40, 244) ;
   opacity: 1;
@@ -402,54 +525,10 @@ p {
   opacity: 1;
   transition: color 0.2s, opacity 0.2s;
   
-  
 }
 
 .cell.revealed .letter {
   color: rgb(60, 40, 244) ;
   opacity: 1;
-
-}
-
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 Spalten */
-  grid-template-rows: auto auto auto auto auto; /* 5 Zeilen */
-  gap: 20px; /* Abstand zwischen den Zellen */
-  width: 80%;
-  max-width: 1200px;
-  background-color:azure;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-/* Grid Items */
-.grid-item {
-  background-color: azure;;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-
-  border-radius: 8px;
-}
-
-/* Datum oben links */
-.date {
-  top: 0;
-  left: 0;
-  font-size: 14px;
-  margin-bottom: 10px;
-  text-align: left;
-}
-
-/* Bild unten rechts */
-.grid-item img {
-  max-width: 50%;
-  height: auto;
-  bottom: 0;
-  right: 0;
 
 }

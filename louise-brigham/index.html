@@ -12,62 +12,118 @@
 </div>
 <body>
     <main>
-        <body>
-<script src="script.js"></script>
-<div class="navigation">
-    <a href="/index.html"><div class="button">home</div></a>
-    <div class="button">←</div>
-    <div class="navi-items"></div>
-    <div class="button">→</div>
+        <head></head>
+<body>
+ <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        .image-wrapper {
+            position: absolute;
+            cursor: move;
+        }
+        .image-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.1);
+            border: 2px dashed #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .image-box span {
+            font-size: 16px;
+            color: #333;
+            padding: 10px;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Add image elements here -->
+        <div class="image-wrapper">
+            <img src="/assets/img/LouiseBrigham/LouiseBrighamportraitwiki.jpeg" alt="Box Furniture 1">
+            <div class="image-box">
+                <span>Box Furniture 1</span>
+                <p> Platzhalter </p>
+            </div>
+        </div>
+        <div class="image-wrapper">
+            <img src="/assets/img/LouiseBrigham/Box_Furniture_wiki.jpg" alt="Box Furniture 2">
+            <div class="image-box">
+                <span>Box Furniture 2</span>
+            </div>
+        </div>
+        <div class="image-wrapper">
+            <img src="/" alt="Child Welfare Exhibit">
+            <div class="image-box">
+                <span>Child Welfare Exhibit</span>
+            </div>
+        </div>
+        <div class="image-wrapper">
+            <img src="/mnt/data/LouiseBrighamportraitwiki.jpeg" alt="Louise Brigham">
+            <div class="image-box">
+                <span>Louise Brigham</span>
+            </div>
+        </div>
     </div>
-   <div class="grid-container">
-        <div class="grid-item">
-            <div class="date">01.01.2025</div>
-            <img src="/assets/img/LouiseBrigham/Box_Furniture_wiki.jpg" alt="Bild 1" alt="Placeholder Image" class="inline-image">
-  <p>
-    Suspendisse potenti. In hac habitasse platea dictumst. Vestibulum at nisi tincidunt, malesuada erat id,
-    malesuada felis. Nunc dictum orci quis sem sagittis vehicula. Aenean accumsan sapien a nunc tristique
-    pellentesque. Etiam posuere, neque sed ultrices faucibus, ligula ligula tincidunt nisl, nec tincidunt
-    quam augue nec mauris.
-  </p>
- </div>
-        <div class="grid-item">
-            <div class="date">02.01.2025</div>
-            <img src="https://via.placeholder.com/150" alt="Bild 2">
-        </div>
-        <div class="grid-item">
-            <div class="date">03.01.2025</div>
-            <img src="https://via.placeholder.com/150" alt="Bild 3">
-        </div>
-        <div class="grid-item">
-            <div class="date">04.01.2025</div>
-            <img src="https://via.placeholder.com/150" alt="Bild 4">
-        </div>
-        <div class="grid-item">
-            <div class="date">05.01.2025</div>
-            <img src="https://via.placeholder.com/150" alt="Bild 5">
-        </div>
-        <div class="grid-item">
-            <div class="date">06.01.2025</div>
-            <img src="https://via.placeholder.com/150" alt="Bild 6">
-        </div>
-        <div class="grid-item">
-            <div class="date">07.01.2025</div>
-            <img src="https://via.placeholder.com/150" alt="Bild 7">
-        </div>
-        <div class="grid-item">
-            <div class="date">08.01.2025</div>
-            <img src="https://via.placeholder.com/150" alt="Bild 8">
-        </div>
-        <div class="grid-item">
-            <div class="date">09.01.2025</div>
-            <img src="https://via.placeholder.com/150" alt="Bild 9">
-        </div>
-        <div class="grid-item">
-            <div class="date">10.01.2025</div>
-            <img src="https://via.placeholder.com/150" alt="Bild 10">
-        </div>
-    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const container = document.querySelector('.container');
+            const wrappers = document.querySelectorAll('.image-wrapper');
+wrappers.forEach(wrapper => {
+                // Random positioning
+                const x = Math.random() * (container.offsetWidth - wrapper.offsetWidth);
+                const y = Math.random() * (container.offsetHeight - wrapper.offsetHeight);
+wrapper.style.left = `${x}px`;
+                wrapper.style.top = `${y}px`;
+const img = wrapper.querySelector('img');
+const box = wrapper.querySelector('.image-box');
+// Set box size and position to match the image
+                img.addEventListener('load', () => {
+                    box.style.width = `${img.width}px`;
+                    box.style.height = `${img.height}px`;
+                    box.style.left = wrapper.style.left;
+                    box.style.top = wrapper.style.top;
+                });
+ // Drag functionality
+                let isDragging = false;
+                let offsetX, offsetY;
+wrapper.addEventListener('mousedown', (e) => {
+                    isDragging = true;
+                    offsetX = e.clientX - wrapper.getBoundingClientRect().left;
+                    offsetY = e.clientY - wrapper.getBoundingClientRect().top;
+                    wrapper.style.zIndex = 1000; // Bring to front
+                });
+document.addEventListener('mousemove', (e) => {
+                    if (!isDragging) return;
+                    const moveX = e.clientX - offsetX;
+                    const moveY = e.clientY - offsetY;
+wrapper.style.left = `${moveX}px`;
+                    wrapper.style.top = `${moveY}px`;
+                });
+document.addEventListener('mouseup', () => {
+                    isDragging = false;
+                });
+            });
+        });
+    </script>
 </body>
     </main>
 </body>
