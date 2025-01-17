@@ -7,10 +7,9 @@
 }
 
 
-
 @font-face {
   font-family: OffBitTrial-101;
-  src:url(../fonts/OffBitTrial/OffBitTrial-101.otf) format("otf");
+  src:url(../fonts/OffBitTrial/OffBitTrial-101.woff2) format("woff2");
   font-weight:200;
   font-style:normal;
 
@@ -18,7 +17,7 @@
 
 @font-face {
   font-family: OffBitTrial-Dot;
-  src:url(../fonts/OffBitTrial/OffBitTrial-Dot.otf) format("otf");
+  src:url(../fonts/OffBitTrial/OffBitTrial-Dot.woff2) format("woff2");
   font-weight:200;
   font-style:normal;
   
