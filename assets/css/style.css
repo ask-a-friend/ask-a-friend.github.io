@@ -12,7 +12,8 @@ body {
 }
 
 .title1 {
-    font-family: "OffBitTrial-101", "IBM Plex Mono";
+  display: flex;  
+  font-family: "OffBitTrial-101", "IBM Plex Mono";
     margin: 50px;
     padding: 0px 0px;
     font-weight: normal;
@@ -91,7 +92,7 @@ body {
    .parent {
     display: flex;
     flex-wrap: nowrap;
-    background-color:black;
+    background-color: rgb(60, 40, 244);
     flex-direction: row;
     justify-content:space-between;
     z-index: 0;
@@ -100,14 +101,14 @@ body {
 
 
 .child-container1 {
-    background-color: black;
+    background-color: rgb(60, 40, 244);
     width: 50vw;
-    height: 65vh;
+    height: 40vh;
     margin: 1px;
     text-align: center;
     line-height: 50px;
     font-size: 10px;
-    overflow: auto;
+    overflow:hidden;
   }
 
 
@@ -115,13 +116,35 @@ body {
     background-color:azure;
     width: 50vw;
     height: 65vh;
-    margin: 1px;
+    margin: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
     text-align: center;
     line-height: 50px;
     font-size: 10px;
     overflow: auto;
   }
   
+  @media (max-width: 768px) {
+    .parent {
+        flex-direction: column; /* Flexbox-Anordnung vertikal */
+        justify-content: center; /* Zentriert die Container */
+        align-items: center; /* Zentriert horizontal */
+    }
+
+    .child-container1 {
+        width: 90vw; /* Breite anpassen für kleinere Bildschirme */
+        margin: 10px 0; /* Vertikaler Abstand */
+        order: 1; /* Child-Container 1 immer zuerst */
+    }
+
+    .child-container2 {
+        width: 90vw; /* Breite anpassen für kleinere Bildschirme */
+        margin: 10px 0; /* Vertikaler Abstand */
+        order: 2; /* Child-Container 2 immer nach Container 1 */
+    }
+}
+
   .hidden-child {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
@@ -160,15 +183,15 @@ img {
     line-height: 1em;
     transform: rotate(-25deg); /* Dreht den Text */
     z-index: 1;
-    color: black;
+    color: rgb(60, 40, 244);
   } 
 
   .button {
     border-radius: 25px;
     border: 1px;
     border-style: dotted;
-    border-color: black;
-    background: black;
+    border-color: rgb(60, 40, 244);
+    background: rgb(60, 40, 244);
     width: 70px;
     height: 25px;
     color:azure;
@@ -186,11 +209,11 @@ img {
     border-radius: 25px;
     border-style: dotted;
     border-width: 1px;
-    border-color: black;
+    border-color: rgb(60, 40, 244);
     background: azure;
     width: 70px;
     height: 25px;
-    color: black;
+    color: rgb(60, 40, 244);
     text-align: center;
     font-weight: normal;
     font-size: 20px;
@@ -224,27 +247,29 @@ img {
     width:50vw
   }
 
-  .random-gallery {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    bottom: 0px
-  }
+  .editorial4 {
+  column-count: 4; /* Anzahl der Spalten */
+  column-gap: 20px; /* Abstand zwischen den Spalten */
+  margin: 20px;
+  line-height: 1.6; /* Zeilenhöhe für Lesbarkeit */
+}
 
-  .gallery-item {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    cursor: grab;
-    bottom: 20px;
-    right: 20px
+@media (max-width: 480px) {
+  .editorial4 {
+    column-count: 1; /* Einzelne Spalte auf Smartphones */
   }
+}
+.editorial4 p {
+  text-align: justify; /* Text ausrichten */
+  margin: 0 0 1em; /* Abstand zwischen Absätzen */
+}
 
-  .gallery-item:active {
-    cursor: grabbing;
-  }
-
+.inline-image {
+  display: block;
+  margin: 10px auto; /* Bild zentrieren */
+  max-width: 100%; /* Bildgröße an die Spaltenbreite anpassen */
+  break-inside: avoid; /* Verhindert, dass das Bild zwischen zwei Spalten geteilt wird */
+}
 
   
   h1 {
@@ -255,6 +280,7 @@ img {
   text-transform: uppercase;
   font-size: 120px;
   line-height: 0em;
+  color: rgb(60, 40, 244);
 }
 
   h2 {
@@ -265,6 +291,7 @@ img {
   text-transform: uppercase;
   font-size: 40px;
   line-height: 1em;
+  color: rgb(60, 40, 244);
 }
 
 h3 {
@@ -275,6 +302,7 @@ h3 {
   text-transform: uppercase;
   font-size: 16px;
   line-height: 1.15em;
+  color: rgb(60, 40, 244);
 }
 
   h4 {
@@ -301,12 +329,15 @@ h3 {
 }
 
 p {
+  font-family: "OffBitTrial-101";
   margin: 10px;
+  padding: top right bottom left;
   padding: 0px 20px;
   font-weight: normal;
   text-align:left;
   font-size: 12px;
   line-height: 1.15em;
+  color: rgb(60, 40, 244);
 }
 
 .crossword:hover {
@@ -325,6 +356,14 @@ p {
     grid-auto-rows: 65px;
     gap: 0px;
     margin: 10px;
+}
+@media (max-width: 768px) {
+  .crossword {
+      grid-template-rows:auto;
+      scale: 0.6; 
+      margin: 0;
+      z-index: 1;
+  }
 }
 
 .cell {
@@ -352,6 +391,10 @@ p {
   opacity: 0;
   transition: color 0.2s, opacity 0.2s;
 }
+.cell:active .letter {
+  color: rgb(60, 40, 244) ;
+  opacity: 1;
+}
 
 .cell:hover .letter
 {
@@ -365,5 +408,48 @@ p {
 .cell.revealed .letter {
   color: rgb(60, 40, 244) ;
   opacity: 1;
+
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 Spalten */
+  grid-template-rows: auto auto auto auto auto; /* 5 Zeilen */
+  gap: 20px; /* Abstand zwischen den Zellen */
+  width: 80%;
+  max-width: 1200px;
+  background-color:azure;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Grid Items */
+.grid-item {
+  background-color: azure;;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  border-radius: 8px;
+}
+
+/* Datum oben links */
+.date {
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Bild unten rechts */
+.grid-item img {
+  max-width: 50%;
+  height: auto;
+  bottom: 0;
+  right: 0;
 
 }
