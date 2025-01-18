@@ -23,7 +23,6 @@
         <div class="title2">the</div>
         <div class="title3">gap</div>
     
-    
     <div class="parent">
     <div class="child-container1"> 
         <div class="crossword">
@@ -112,6 +111,7 @@
 </p>
         </h2>
        </div></div>
+       
     
 
 </div>
@@ -207,9 +207,25 @@
             </div>        
     </div>
 </div>
+<script>
+    // JavaScript: Fügt die Klasse "persistent" hinzu, wenn die Zelle gehovt wird
+    const cells = document.querySelectorAll(".cell");
 
+    cells.forEach(cell => {
+        cell.addEventListener("mouseover", () => {
+            const letter = cell.querySelector(".letter");
+            if (letter) {
+                letter.classList.add("persistent");
+            }
+        });
+    });
+</script>
 
 </body> 
+
+
+
+
     </main>
 </body>
 </html>

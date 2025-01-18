@@ -14,116 +14,89 @@
     <main>
         <head></head>
 <body>
- <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
+<style>
+.grandparent {
+    background-color: rgb(60, 40, 244);
+    border: 2px solid rgb(60, 40, 244);
+    width: 90vw;
+    height: 100vh;
+    margin: 10px;
+    line-height: 50px;
+    overflow: auto;
+    transform: rotate(0deg);
+    }
+    .puzzle-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 15vw);
+            grid-auto-rows: 25vh;
+            gap: 0px;
+            margin: 0px;
         }
-        .container {
-            position: relative;
-            width: 100vw;
-            height: 100vh;
-        }
-        .image-wrapper {
-            position: absolute;
-            cursor: move;
-        }
-        .image-box {
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: rgba(0, 0, 0, 0.1);
-            border: 2px dashed #333;
+.puzzle-cell {
+            width: 15vw;
+            height: 25vh;
+            border: 2px solid rgb(60, 40, 244);
             display: flex;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            pointer-events: none;
-            z-index: -1;
+            background-color: azure;
+            position: relative;
+            border-radius: 15px 0px 0px 0px;
         }
-        .image-box span {
-            font-size: 16px;
-            color: #333;
-            padding: 10px;
+.puzzle-cell.hidden-cell {
+            background-color: rgb(60, 40, 244);
+            border-radius: 0px 0px 0px 0px;
         }
-        img {
-            display: block;
-            max-width: 100%;
-            height: auto;
+.puzzle-letter {
+            font-size: 2rem;
+            font-family: "OffBitTrial-101";
+            color: rgb(60, 40, 244);
+            font-weight: bold;
+            color: transparent;
+            opacity: 1;
+            animation: fadeOut 2s;
         }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <!-- Add image elements here -->
-        <div class="image-wrapper">
-            <img src="/assets/img/LouiseBrigham/LouiseBrighamportraitwiki.jpeg" alt="Box Furniture 1">
-            <div class="image-box">
-                <span>Box Furniture 1</span>
-                <p> Platzhalter </p>
-            </div>
-        </div>
-        <div class="image-wrapper">
-            <img src="/assets/img/LouiseBrigham/Box_Furniture_wiki.jpg" alt="Box Furniture 2">
-            <div class="image-box">
-                <span>Box Furniture 2</span>
-            </div>
-        </div>
-        <div class="image-wrapper">
-            <img src="/" alt="Child Welfare Exhibit">
-            <div class="image-box">
-                <span>Child Welfare Exhibit</span>
-            </div>
-        </div>
-        <div class="image-wrapper">
-            <img src="/mnt/data/LouiseBrighamportraitwiki.jpeg" alt="Louise Brigham">
-            <div class="image-box">
-                <span>Louise Brigham</span>
-            </div>
-        </div>
-    </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const container = document.querySelector('.container');
-            const wrappers = document.querySelectorAll('.image-wrapper');
-wrappers.forEach(wrapper => {
-                // Random positioning
-                const x = Math.random() * (container.offsetWidth - wrapper.offsetWidth);
-                const y = Math.random() * (container.offsetHeight - wrapper.offsetHeight);
-wrapper.style.left = `${x}px`;
-                wrapper.style.top = `${y}px`;
-const img = wrapper.querySelector('img');
-const box = wrapper.querySelector('.image-box');
-// Set box size and position to match the image
-                img.addEventListener('load', () => {
-                    box.style.width = `${img.width}px`;
-                    box.style.height = `${img.height}px`;
-                    box.style.left = wrapper.style.left;
-                    box.style.top = wrapper.style.top;
-                });
- // Drag functionality
-                let isDragging = false;
-                let offsetX, offsetY;
-wrapper.addEventListener('mousedown', (e) => {
-                    isDragging = true;
-                    offsetX = e.clientX - wrapper.getBoundingClientRect().left;
-                    offsetY = e.clientY - wrapper.getBoundingClientRect().top;
-                    wrapper.style.zIndex = 1000; // Bring to front
-                });
-document.addEventListener('mousemove', (e) => {
-                    if (!isDragging) return;
-                    const moveX = e.clientX - offsetX;
-                    const moveY = e.clientY - offsetY;
-wrapper.style.left = `${moveX}px`;
-                    wrapper.style.top = `${moveY}px`;
-                });
-document.addEventListener('mouseup', () => {
-                    isDragging = false;
-                });
-            });
-        });
-    </script>
+.puzzle-cell:hover .puzzle-letter {
+            color: rgb(60, 40, 244);
+            animation: fadeOut 2s;
+        }
+</style>
+<div class="grandparent">
+<div class="puzzle-grid">
+<!-- Zwischenzeile -->
+ <div class="puzzle-cell hidden-cell"></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">L</span></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">O</span></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">U</span></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">I</span></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">S</span></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">E</span></div>
+<!-- Zeile 5 -->
+<div class="puzzle-cell hidden-cell"></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">L</span></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">O</span></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">U</span></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">I</span></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">S</span></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">E</span></div>
+<!-- Zeile 6 -->
+<div class="puzzle-cell hidden-cell"></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">L</span></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">O</span></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">U</span></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">I</span></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">S</span></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">E</span></div>
+<!-- Zwischenzeile -->
+ <div class="puzzle-cell hidden-cell"></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">L</span></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">O</span></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">U</span></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">I</span></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">S</span></div>
+    <div class="puzzle-cell"><span class="puzzle-letter">E</span></div>
+</div>
+</div>
 </body>
     </main>
 </body>

@@ -206,26 +206,26 @@ body {
     background-color: rgb(60, 40, 244);
     width: 80vw;
     height: 60vh;
-    margin: 1px;
+    margin: 0px;
     text-align: center;
     line-height: 50px;
     font-size: 10px;
     overflow:hidden;
-    
   }
 
 .child-container2 {
     background-color:azure;
-    width: 50vw;
-    height: 65vh;
-    margin: 25px;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 40vw;
+    height: 75vh;
+    margin: 65px;
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: center;
     line-height: 50px;
     font-size: 10px;
     overflow: auto;
-    border-radius: 0px 25px 0px 0px;
+    border-radius: 25px 0px 0px 0px;
+    
   }
   
   @media (max-width: 780px) {
@@ -472,7 +472,7 @@ p {
 
 .crossword {
     display: grid;
-    grid-template-columns: repeat(15, 60px);
+    grid-template-columns: repeat(15, 55px);
     grid-auto-rows: 85px;
     gap: 0px;
     margin: 0px;
@@ -487,9 +487,9 @@ p {
 }
 
 .cell {
-    width: 60px;
+    width: 55px;
     height: 85px;
-    border: 3px solid rgb(60, 40, 244) ;
+    border: 2px solid rgb(60, 40, 244);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -511,24 +511,17 @@ p {
   font-weight: bold;
   color: transparent;
   opacity: 0;
-  transition: color 0.2s, opacity 0.2s;
-}
-
-.cell:active .letter {
-  color: rgb(60, 40, 244) ;
-  opacity: 1;
+  
 }
 
 .cell:hover .letter
 {
   color: rgb(60, 40, 244) ;
   opacity: 1;
-  transition: color 0.2s, opacity 0.2s;
-  
 }
 
-.cell.revealed .letter {
+.letter.persistent
+{
   color: rgb(60, 40, 244) ;
   opacity: 1;
-
 }
