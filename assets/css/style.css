@@ -295,10 +295,9 @@ background-color: var(--color-2);
 
 .box-1 {
   position: absolute;
-  margin-top: 1%;
+  margin-top: 0%;
   left: 50%;
-  width: 200px;
-  height: 400px;
+  width: 250px;
   border-radius: 25px 0px 0px 0px;
   border: 2px solid var(--color-1);
   background-color: var(--color-2);
@@ -306,24 +305,38 @@ background-color: var(--color-2);
   z-index: 1;
   }
   
+  .box-1:hover {
+    margin-top: 7%;
+    width: 350px;
+    transform: skewY(5deg);
+    z-index: 7;
+  }
+
   .box-2 {
   position: absolute;
   margin-top: 2.5%;
   left: 50%;
   width: 300px;
-  height: 400px;
+  min-height: 400px;
   border-radius: 25px 0px 0px 0px;
   border: 2px solid var(--color-1);
   background-color: var(--color-2);
   transform: skewY(-10deg);
-  z-index: 2;
+  z-index: 2;}
+  
+  .box-2:hover {
+    margin-top: 7%;
+    width: 350px;
+    transform: skewY(5deg);
+    z-index: 7;
   }
-
+  
 .box-3 {
 position: absolute;
-margin-top: 6%;
+margin-top: 7%;
 left: 50%;
 width: 350px;
+min-height: 400px;
 border-radius: 25px 0px 0px 0px;
 border: 2px solid var(--color-1);
 background-color: var(--color-2);
@@ -333,10 +346,10 @@ z-index: 3;
 
 .box-4 {
 position: absolute;
-margin-top: 12%;
+margin-top: 13%;
 left: 50%;
 width: 300px;
-height: 400px;
+min-height: 400px;
 border-radius: 25px 0px 0px 0px;
 border: 2px solid var(--color-1);
 background-color: var(--color-2);
@@ -348,54 +361,34 @@ z-index: 4;
 position: absolute;
 margin-top: 16%;
 left: 50%;
-width: 150px;
-height: 400px;
+width: 200px;
+min-height: 400px;
 border-radius: 25px 0px 0px 0px;
 border: 2px solid var(--color-1);
 background-color: var(--color-2);
-transform: skewY(60deg);
+transform: skewY(50deg);
 z-index: 5;
   }
 
-.box-2:hover {
-  top: 109%;
-  width: 350px;
-  transform: skewY(5deg);
-  z-index: 7;
-}
-
-.five:hover {
-  top: 109%;
-  width: 350px;
-  transform: skewY(5deg);
-}
-
-.six:hover {
-  top: 109%;
-  width: 350px;
-  transform: skewY(5deg);
-}
-
 .box-6 {
   position: absolute;
-  margin-top: 15%;
+  margin-top: 16%;
   right: 49.9%;
-  width: 150px;
-  height: 400px;
+  width: 200px;
+  min-height: 400px;
   border-radius: 0px 25px 0px 0px;
   border: 2px solid var(--color-1);
   background-color: var(--color-2);
-  transform: skewY(-60deg);
+  transform: skewY(-50deg);
   z-index: 6;
   }
 
 .box-7 {
 position: absolute;
-margin-top: 15%;
-top: 119% ;
+margin-top: 13%;
 right: 49.9%;
 width: 300px;
-height: 400px;
+min-height: 400px;
 border-radius: 0px 25px 0px 0px;
 border: 2px solid var(--color-1);
 background-color: var(--color-2);
@@ -409,7 +402,7 @@ margin-top: 15%;
 top: 109%;
 right: 49.9%;
 width: 350px;
-height: 400px;
+min-height: 400px;
 border-radius: 0px 25px 0px 0px;
 border: 2px solid var(--color-1);
 background-color: var(--color-2);
@@ -423,7 +416,7 @@ margin-top: 15%;
 top: 102%;
 right: 49.9%;
 width: 300px;
-height: 400px;
+min-height: 400px;
 border-radius: 0px 25px 0px 0px;
 border: 2px solid var(--color-1);
 background-color: var(--color-2);
@@ -458,7 +451,8 @@ z-index:3;
 }
 
 img {
-    width: 250px;
+    width: 200px;
+    padding: 20px;
   }
 
   .imgcredit {
@@ -470,7 +464,7 @@ img {
     line-height: 1em;
     transform: rotate(0deg); /* Dreht den Text */
     z-index: 1;
-    color: var(--color-1);
+    color: var(--color-2);
     opacity: 0
   } 
 
