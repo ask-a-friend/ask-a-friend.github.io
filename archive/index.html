@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archiv</title>
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap">
+    <script src="/assets/js/script.js"></script>
+</head>
+<body>
+    <header>
+    </header>
+    <main>
+        <head></head>
+<body>
+<style>
+.grandparent {
+    background-color: var(--color-1);
+    border: 0px solid var(--color-1);
+    width: 90vw;
+    height: 84vh;
+    margin: 0px;
+    padding: 10px 2px 0px 0px;
+    line-height: 50px;
+    overflow: hidden;
+    transform: rotate(0deg);
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.puzzle-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 Spalten mit gleichmäßiger Breite */
+    width: 100%; /* Nimmt die gesamte Breite der .grandparent ein */
+    height: 100%; /* Nimmt die gesamte Höhe der .grandparent ein */
+    gap: 0px;
+}
+.puzzle-cell {
+    border: 2px solid var(--color-1);
+    margin: -10px -2px 0px 0px; /* Negative top margin for overlap */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-2);
+    position: relative;
+    border-radius: 15px 0px 0px 0px;
+    z-index: 1; /* Ensure overlap is visible */
+    cursor: crosshair; 
+}
+.puzzle-cell.hidden-cell {
+    background-color: var(--color-1);
+    border-radius: 15px 0px 0px 0px;
+}
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.puzzle-letter {
+    font-size: 2rem;
+    font-family: "OffBitTrial-101";
+    color: var(--color-1);
+    font-weight: bold;
+    color: transparent;
+    opacity: 0;
+    padding: 10px;
+}
+.puzzle-cell:hover .puzzle-letter {
+    color: var(--color-1);
+    opacity: 1 
+}
+.puzzle-letter.persistent
+{
+  color: var(--color-1);
+  opacity: 1;
+  padding: 15px;
+}
+.dropdown-box {
+  display: none;
+  position: relative;
+  padding: 10px;
+  z-index: 0;
+  overflow-y: auto;
+}
+.puzzle-cell.active .dropdown-box {
+  display: block;
+}
+:root {
+  --color-1: rgb(0, 0, 0); 
+  --color-2: rgb(207, 221, 250);
+}
+</style>
+<body>
+<div class="grandparent">
+  <div class="puzzle-grid">
+    <div class="puzzle-cell hidden-cell"></div>
+    <div class="puzzle-cell">
+      <span class="puzzle-letter">A</span>
+      <div class="dropdown-box">
+<p><h3>Anni Albers</h3></p>
+<p></div>
+</div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">B</span>
+<div class="dropdown-box"></p>
+<p><h3><a href="/louise-brigham/">Louise Brigham</a></h3></p>
+<p><h3><a href="/charlotte-perriand/">Charlotte Perriand</a></h3></p>
+<p><h3><a href="/posts/louise-brigham-post/">Louise Brigham</a></h3></p>
+<p><h3><a href="/posts/marianne-brandt-post/">Marianne Brandt</a></h3></p>
+<p><h3><a href="/posts/lina-bo-bardi-post/">Lina Bo Bardi</a></h3></p>
+<p></div>
+</div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">C</span>
+<div class="dropdown-box"></p>
+<p></div>
+</div>
+<div class="puzzle-cell hidden-cell"></div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">D</span>
+<div class="dropdown-box"></p>
+<p></div>
+</div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">E</span>
+<div class="dropdown-box"></p>
+<p></div>
+</div>
+<div class="puzzle-cell hidden-cell"></div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">F</span>
+<div class="dropdown-box"></p>
+<p></div>
+</div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">G</span>
+<div class="dropdown-box"></p>
+<p><h3>Eileen Gray</h3></p>
+<p></div>
+</div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">H</span>
+<div class="dropdown-box"></p>
+<p><h3>Elisabeth Hauptmann</h3></p>
+<p></div>
+</div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">I</span>
+<div class="dropdown-box"></p>
+<p></div>
+</div>
+<div class="puzzle-cell hidden-cell"></div>
+<div class="puzzle-cell hidden-cell"></div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">J</span>
+<div class="dropdown-box"></p>
+<p></div>
+</div>
+<div class="puzzle-cell hidden-cell"></div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">K</span>
+<div class="dropdown-box"></p>
+<p></div>
+</div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">L</span>
+<div class="dropdown-box"></p>
+<p></div>
+</div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">M</span>
+<div class="dropdown-box"></p>
+<p></div>
+</div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">N</span>
+<div class="dropdown-box"></p>
+<p></div>
+</div>
+<div class="puzzle-cell hidden-cell"></div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">O</span>
+<div class="dropdown-box"></p>
+<p></div>
+</div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">P</span>
+<div class="dropdown-box"></p>
+<p><h3>Charlotte Perriand</h3></p>
+<p></div>
+</div>
+<div class="puzzle-cell hidden-cell"></div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">Q</span>
+<div class="dropdown-box"></p>
+<p></div>
+</div>
+<div class="puzzle-cell hidden-cell"></div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">R</span>
+<div class="dropdown-box"></p>
+<p></div>
+</div>
+<div class="puzzle-cell hidden-cell"></div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">S</span>
+<div class="dropdown-box"></p>
+<p><h3>Barbara Stauffacher Solomon</h3></p>
+<p><h3>Gunta Stölzl</h3></p>
+<p></div>
+</div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">T</span>
+<div class="dropdown-box"></p>
+<p><h3>Sophie Taeuber-Arp</h3></p>
+<p></div>
+</div>
+<div class="puzzle-cell hidden-cell"></div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">U</span>
+<div class="dropdown-box"></p>
+<p></div>
+</div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">V</span>
+<div class="dropdown-box"></p>
+<p></div>
+</div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">W</span>
+<div class="dropdown-box"></p>
+<p></div>
+</div>
+<div class="puzzle-cell hidden-cell"></div>
+<div class="puzzle-cell hidden-cell"></div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">X</span>
+<div class="dropdown-box"></p>
+<p></div>
+</div>
+<div class="puzzle-cell hidden-cell"></div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">Y</span>
+<div class="dropdown-box"></p>
+<p></div>
+</div>
+<div class="puzzle-cell hidden-cell"></div>
+<div class="puzzle-cell">
+<span class="puzzle-letter">Z</span>
+<div class="dropdown-box"></p>
+<p></div>
+</div></p>
+  </div>
+</div>
+<script>
+        const cells = document.querySelectorAll(".puzzle-cell");
+cells.forEach(cell => {
+            cell.addEventListener("mouseover", () => {
+                const letter = cell.querySelector(".puzzle-letter");
+                if (letter) {
+                    letter.classList.add("persistent");
+                }
+            });
+        });
+        document.querySelectorAll(".puzzle-cell").forEach(cell => {
+  cell.addEventListener("click", () => {
+    if (cell.classList.contains("active")) {
+      cell.classList.remove("active");
+    } else {
+      document.querySelectorAll(".puzzle-cell").forEach(c => c.classList.remove("active"));
+      cell.classList.add("active");
+    }
+  });
+});
+    </script>
+</body>
+    </main>
+    <footer>
+    
+    </footer>
+</body>
+</html>

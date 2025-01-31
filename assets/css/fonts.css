@@ -23,9 +23,15 @@
   
   }
 @font-face {
-  font-family: OfKosugiMaru-Regular;
-  src:url(../fonts/KosugiMaru/KosugiMaru-Regular.ttf) format("ttf");
+  font-family: KosugiMaru-Regular;
+  src:url(../fonts/KosugiMaru/KosugiMaru-Regular.woff) format("woff");
   font-weight:200;
   font-style:normal;
-  
   }
+
+  @font-face {
+    font-family: BoucleesRegular;
+    src:url(../fonts/Bouclees/Bouclees-Regular.woff2) format("woff2");
+    font-weight:200;
+    font-style:normal;
+    }
