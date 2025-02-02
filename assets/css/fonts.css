@@ -35,3 +35,11 @@
     font-weight:200;
     font-style:normal;
     }
+
+    @font-face {
+      font-family: Fluxisch Else;
+      src:url(../fonts/FluxischElse/FluxischElse-Regular.woff) format("woff");
+      font-weight:200;
+      font-style:normal;
+      }
+  

@@ -1,8 +1,8 @@
 
 
 body {
-    margin: 10;
-    padding: 50px 10px 10px 10px;
+    margin: 0;
+    padding: 0px 10px 10px 10px;
     height: 100vh;
     display: flex;
     font-size: 16px;
@@ -12,179 +12,116 @@ body {
     font-family: "IBM Plex Mono";
 }
 
-.title1 {
-  display: flex;  
+/* Spiegelanimation für title1 (rechts) */
+.title1 { 
   font-family: "OffBitTrial-101", "IBM Plex Mono";
-    margin: 50px;
-    padding: 0px 0px;
-    font-weight: normal;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 200px;
-    line-height: 0.6em;
-    color: var(--color-2);
+  margin: 50px;
+  padding: 0px 30% 0px 0px; 
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 200px;
+  line-height: 0.9em;
+  letter-spacing: 0.1em;
+  color: var(--color-2);
+  animation: mirrorRight 0s infinite alternate;
 }
 
-@media (max-width: 780px) {
-  .title1 {
-    display: flex;  
-    font-family: "OffBitTrial-101", "IBM Plex Mono";
-      margin: 25px;
-      padding: 0px 0px;
-      font-weight: normal;
-      text-align: center;
-      text-transform: uppercase;
-      font-size: 150px;
-      line-height: 1em;
-      color: var(--color-2);
-  }
-}  
+/* Spiegelanimation für title2 (rechts) */
 .title2 {
-    font-family: "OffBitTrial-101", "IBM Plex Mono";
-    margin: 50px;
-    padding: 0px 0px;
-    font-weight: normal;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 200px;
-    line-height: -1em;
-    color: var(--color-2);
-    z-index: 1;
-}
-
-@media (max-width: 780px) {
-  .title2 {
-    display: flex;  
-    font-family: "OffBitTrial-101", "IBM Plex Mono";
-      margin: 25px;
-      padding: 0px 0px;
-      font-weight: normal;
-      text-align: right;
-      text-transform: uppercase;
-      font-size: 150px;
-      line-height: -1em;
-      color: var(--color-2);
-  }
-}  
-
-.title3 {
-    font-family: "OffBitTrial-101", "IBM Plex Mono";
-    margin: 50px;
-    padding: 0px 0px;
-    font-weight: normal;
-    text-align: right;
-    text-transform: uppercase;
-    font-size: 200px;
-    line-height: -1em;
-    color: var(--color-2);
-    z-index: 1;
-}
-
-@media (max-width: 780px) {
-  .title3 {
-    display: flex;  
-    font-family: "OffBitTrial-101", "IBM Plex Mono";
-      margin: 25px;
-      padding: 0px 0px;
-      font-weight: normal;
-      text-align: right;
-      text-transform: uppercase;
-      font-size: 200px;
-      line-height: 1em;
-      color: var(--color-2);
-  }
-}  
-
-.initial1 {
-  display: flex;  
   font-family: "OffBitTrial-101", "IBM Plex Mono";
-    margin: 50px;
-    padding: 0px 0px;
-    font-weight: normal;
-    text-align: left;
-    text-transform: uppercase;
-    font-size: 300px;
-    line-height: 0.6em;
-    color: var(--color-2);
+  margin: 50px;
+  padding: 0px 30% 0px 0px; 
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 200px;
+  letter-spacing: 0.1em;
+  color: var(--color-2);
+  animation: mirrorRight 0s infinite alternate;
 }
 
-@media (max-width: 780px) {
-  .initial1 {
-    display: flex;  
-    font-family: "OffBitTrial-101", "IBM Plex Mono";
-      margin: 25px;
-      padding: 0px 0px;
-      font-weight: normal;
-      text-align: left;
-      text-transform: uppercase;
-      font-size: 150px;
-      line-height: 1em;
-      color: var(--color-2);
+/* Spiegelanimation für title3 (links) */
+.title3 {
+  font-family: "OffBitTrial-101", "IBM Plex Mono";
+  margin: 0px 50px 50px 0px;
+  padding: 0px 0px 0px 30%; 
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 200px;
+  line-height: 0.9em;
+  letter-spacing: 0.1em;
+  z-index: 1;
+  color: var(--color-2);
+  animation: mirrorLeft 0s infinite alternate;
+}
+
+/* Spiegelanimation an der rechten vertikalen Achse */
+@keyframes mirrorRight {
+  0% {
+    transform: scaleX(-1); /* Keine Spiegelung, bleibt an der rechten Position */
   }
-}  
-.initial2 {
-    font-family: "OffBitTrial-101", "IBM Plex Mono";
-    margin: 50px;
-    padding: 0px 0px;
-    font-weight: normal;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 300px;
-    line-height: -1em;
-    color: var(--color-2);
-    z-index: 1;
-}
-
-@media (max-width: 780px) {
-  .initial2 {
-    display: flex;  
-    font-family: "OffBitTrial-101", "IBM Plex Mono";
-      margin: 25px;
-      padding: 0px 0px;
-      font-weight: normal;
-      text-align: right;
-      text-transform: uppercase;
-      font-size: 150px;
-      line-height: -1em;
-      color: var(--color-2);
+  100% {
+    transform: scaleX(1); /* Spiegeln an der vertikalen Achse */
   }
-}  
-
-.aboutbox {
-    position: fixed;
-    left:0px;
-    top:0px;
-    width: 30px;
-    height: 200px;
-    flex-wrap: nowrap;
-    background-color: var(--color-1) ;
-    box-shadow: 5px 2px 10px 0px var(--color-2); 
-    flex-direction: row;
-    z-index: 1;
-    border-radius: 0px 0px 15px 0%;
-    
 }
 
-.linkbox {
-    position: fixed; 
-    bottom: 0; 
-    right: 0; 
-    width: 30px;
-    height: 200px;
-    flex-wrap: nowrap;
-    background-color: var(--color-1);
-    box-shadow: 0px 0px 10px 4px var(--color-2);; 
-    flex-direction: row;
-    z-index: 1;
-    border-radius: 15px 0px 0px 0px;
-    
+/* Spiegelanimation an der linken vertikalen Achse */
+@keyframes mirrorLeft {
+  0% {
+    transform: scaleX(-1); /* Spiegeln an der linken vertikalen Achse */
+  }
+  100% {
+    transform: scaleX(1); /* Keine Spiegelung, bleibt an der linken Position */
+  }
 }
+
+.aboutbox-dropdown {
+  position: relative;
+  display: inline-block;  
+  left: 22%;
+  top: 125%;
+  width: 200px;
+  height: 100px;
+  z-index: 999;
+  
+}
+
+.aboutbox-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 300px;
+  min-height: 600px;
+  padding: 12px 16px;
+  z-index: 999;
+}
+
+.aboutbox-dropdown:hover .aboutbox-dropdown-content {
+  display: block;
+}
+
+
+.abouttypo {
+  font-family: "Fluxisch Else";
+  font-size: 25px;
+  position: absolute;
+  left:25%;
+  top:25%;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 1;
+  color:var(--color-2);
+}
+
 
 .grandparent {
     background-color: var(--color-1);
-    width: 90vw;
+    width: 100vw;
     height: 100vh;
-    margin: 10px;
+    margin: 0px;
     line-height: 50px;
     overflow: auto;
     transform: rotate(0deg);
@@ -197,7 +134,6 @@ body {
     flex-direction: row;
     justify-content:space-between;
     z-index: 0;
-    overflow-y:scroll 
     
 }
 
@@ -297,7 +233,7 @@ background-color: var(--color-2);
   position: absolute;
   margin-top: 0%;
   left: 50%;
-  width: 250px;
+  width: 220px;
   border-radius: 25px 0px 0px 0px;
   border: 2px solid var(--color-1);
   background-color: var(--color-2);
@@ -316,7 +252,7 @@ background-color: var(--color-2);
   position: absolute;
   margin-top: 2.5%;
   left: 50%;
-  width: 300px;
+  width: 260px;
   min-height: 400px;
   border-radius: 25px 0px 0px 0px;
   border: 2px solid var(--color-1);
@@ -335,7 +271,7 @@ background-color: var(--color-2);
 position: absolute;
 margin-top: 7%;
 left: 50%;
-width: 350px;
+width: 300px;
 min-height: 400px;
 border-radius: 25px 0px 0px 0px;
 border: 2px solid var(--color-1);
@@ -398,8 +334,7 @@ z-index: 5;
 
 .box-8 {
 position: absolute;
-margin-top: 15%;
-top: 109%;
+margin-top: 7%;
 right: 49.9%;
 width: 350px;
 min-height: 400px;
@@ -413,7 +348,6 @@ z-index: 4;
 .box-9 {
 position: absolute;
 margin-top: 15%;
-top: 102%;
 right: 49.9%;
 width: 300px;
 min-height: 400px;
@@ -424,9 +358,171 @@ transform: skewY(10deg);
 z-index:3;
 }
 
+.box-10 {
+  position: absolute;
+  margin-top: 40%;
+  left: 50%;
+  width: 250px;
+  border-radius: 25px 0px 0px 0px;
+  border: 2px solid var(--color-1);
+  background-color: var(--color-2);
+  transform: skewY(-20deg);
+  z-index: 1;
+  }
+
+  .box-11 {
+  position: absolute;
+  margin-top: 2.5%;
+  left: 50%;
+  width: 300px;
+  min-height: 400px;
+  border-radius: 25px 0px 0px 0px;
+  border: 2px solid var(--color-1);
+  background-color: var(--color-2);
+  transform: skewY(-10deg);
+  z-index: 2;}
+  
+  .box-11:hover {
+    margin-top: 7%;
+    width: 350px;
+    transform: skewY(5deg);
+    z-index: 7;
+  }
+  
+.box-12 {
+position: absolute;
+margin-top: 7%;
+left: 50%;
+width: 350px;
+min-height: 400px;
+border-radius: 25px 0px 0px 0px;
+border: 2px solid var(--color-1);
+background-color: var(--color-2);
+transform: skewY(5deg);
+z-index: 3;
+}
+
+.box-13 {
+position: absolute;
+margin-top: 13%;
+left: 50%;
+width: 300px;
+min-height: 400px;
+border-radius: 25px 0px 0px 0px;
+border: 2px solid var(--color-1);
+background-color: var(--color-2);
+transform: skewY(30deg);
+z-index: 4;
+}
+
+.box-14 {
+position: absolute;
+margin-top: 16%;
+left: 50%;
+width: 200px;
+min-height: 400px;
+border-radius: 25px 0px 0px 0px;
+border: 2px solid var(--color-1);
+background-color: var(--color-2);
+transform: skewY(50deg);
+z-index: 5;
+  }
+
+.box-15 {
+  position: absolute;
+  margin-top: 16%;
+  right: 49.9%;
+  width: 200px;
+  min-height: 400px;
+  border-radius: 0px 25px 0px 0px;
+  border: 2px solid var(--color-1);
+  background-color: var(--color-2);
+  transform: skewY(-50deg);
+  z-index: 6;
+  }
+
+.box-16 {
+position: absolute;
+margin-top: 13%;
+right: 49.9%;
+width: 300px;
+min-height: 400px;
+border-radius: 0px 25px 0px 0px;
+border: 2px solid var(--color-1);
+background-color: var(--color-2);
+transform: skewY(-30deg);
+z-index: 5;
+}
+
+.box-17 {
+position: absolute;
+margin-top: 15%;
+top: 109%;
+right: 49.9%;
+width: 350px;
+min-height: 400px;
+border-radius: 0px 25px 0px 0px;
+border: 2px solid var(--color-1);
+background-color: var(--color-2);
+transform: skewY(-5deg); 
+z-index: 4;
+}
+
+.box-18 {
+position: absolute;
+margin-top: 15%;
+top: 102%;
+right: 49.9%;
+width: 300px;
+min-height: 400px;
+border-radius: 0px 25px 0px 0px;
+border: 2px solid var(--color-1);
+background-color: var(--color-2);
+transform: skewY(10deg);
+z-index: 3;
+}
+
+.fan {
+  position: absolute;
+  margin-top: -1%;
+  left: 50%;
+  min-height: 400px;
+  width: 230px;
+  border-radius: 25px 0px 0px 0px;
+  border: 1.5px solid var(--color-2);
+  background-color: var(--color-1);
+  transform: skewY(-25deg);
+  z-index: 0;  
+}
+
+.fan-1 {
+  position: absolute;
+  margin-top: -2%;
+  left: 50%;
+  min-height: 400px;
+  width: 220px;
+  border-radius: 25px 0px 0px 0px;
+  border: 1.5px solid var(--color-2);
+  background-color: var(--color-1);
+  transform: skewY(-30deg);
+  z-index: 0;  
+}
+
+.fan-2 {
+  position: absolute;
+  margin-top: -3%;
+  left: 50%;
+  min-height: 400px;
+  width: 200px;
+  border-radius: 25px 0px 0px 0px;
+  border: 1.5px solid var(--color-2);
+  background-color: var(--color-1);
+  transform: skewY(-35deg);
+  z-index: 0;  
+}
+
 .hidden-child {
     opacity: 0;
-  
   }
 
   .child-container1:hover .hidden-child {
@@ -436,7 +532,7 @@ z-index:3;
   .child-container2:hover .hidden-child {
     opacity: 1
   }
-  .post-container:hover .hidden-child {
+  .post-box:hover .hidden-child {
     opacity: 1
   }
 
@@ -449,6 +545,73 @@ z-index:3;
     padding-left: 20px;
     color: inherit;
 }
+
+
+.crossword:hover {
+  cursor: crosshair;
+}
+
+
+img:hover {
+  cursor: crosshair;
+}
+
+
+.crossword {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(10, 9%);
+  padding-left: 25%;
+  grid-auto-rows: 24%;
+  gap: 0px;
+  margin: 0px;
+}
+@media (max-width: 768px) {
+.crossword {
+    scale: 0.8; 
+    margin: 0;
+    z-index: 1;
+}
+}
+
+.cell {
+  width: 55px;
+  height: 85px;
+  border: 2px solid var(--color-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-2);
+  position: relative;
+  border-radius: 15px 0px 0px 0px;
+  
+}
+
+.cell.hidden {
+  background-color:var(--color-1);
+  border-radius: 0px 0px 0px 0px;
+}
+
+.letter {
+font-size: 2rem;
+font-family: "OffBitTrial-101";
+color: rgb(60, 40, 244);
+font-weight: bold;
+color: transparent;
+opacity: 0;
+
+}
+
+.cell:hover .letter {
+color: var(--color-1) ;
+opacity: 1;
+}
+
+.letter.persistent {
+color: var(--color-1) ;
+opacity: 1;
+}
+
 
 img {
     width: 200px;
@@ -565,10 +728,22 @@ img {
 a:hover {
 text-decoration: underline; /* Optional: Unterstrich beim Hover */
 color: inherit;
-          }
-  
-  h1 {
-    margin: 10px;
+}
+
+p {
+  font-family: "Fluxisch Else";
+  margin: 1em;
+  padding: top right bottom left;
+  padding: 0px 20px;
+  font-weight: normal;
+  text-align:left;
+  font-size: 16px;
+  line-height: 1.15em;
+  color: var(--color-1);
+}
+
+h1 {
+  margin: 10px;
   padding: 0px 20px;
   font-weight: normal;
   text-align: right;
@@ -601,16 +776,6 @@ h3 {
   font-family: KosugiMaru-Regular;
 }
 
-  h4 {
-  margin: 0px;
-  padding: 12px 10px 15px 5px;
-  font-weight: normal;
-  text-align: center;
-  text-transform: uppercase;
-  transform: rotate(90deg); 
-  z-index: 1;
-  color:var(--color-2);
-}
    h6 {
     font-family: OffBitTrial-101;
     margin: 0px;
@@ -622,84 +787,6 @@ h3 {
     text-transform: uppercase;
     z-index: 1;
     color: var(--color-2);
-}
-
-p {
-  font-family: "OffBitTrial-101";
-  margin: 1em;
-  padding: top right bottom left;
-  padding: 0px 20px;
-  font-weight: normal;
-  text-align:left;
-  font-size: 12px;
-  line-height: 1.15em;
-  color: var(--color-1);
-}
-
-.crossword:hover {
-    cursor: crosshair;
-  }
-
-  
-  img:hover {
-    cursor: crosshair;
-  }
-
-
-.crossword {
-    display: grid;
-    grid-template-columns: repeat(10, 55px);
-    grid-auto-rows: 85px;
-    gap: 0px;
-    margin: 0px;
-}
-@media (max-width: 768px) {
-  .crossword {
-      grid-template-rows:auto;
-      scale: 0.6; 
-      margin: 0;
-      z-index: 1;
-  }
-}
-
-.cell {
-    width: 55px;
-    height: 85px;
-    border: 2px solid var(--color-1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--color-2);
-    position: relative;
-    border-radius: 15px 0px 0px 0px;
-    
-}
-
-.cell.hidden {
-    background-color:var(--color-1);
-    border-radius: 0px 0px 0px 0px;
-}
-
-.letter {
-  font-size: 2rem;
-  font-family: "OffBitTrial-101";
-  color: rgb(60, 40, 244);
-  font-weight: bold;
-  color: transparent;
-  opacity: 0;
-  
-}
-
-.cell:hover .letter
-{
-  color: var(--color-1) ;
-  opacity: 1;
-}
-
-.letter.persistent
-{
-  color: var(--color-1) ;
-  opacity: 1;
 }
 
 
