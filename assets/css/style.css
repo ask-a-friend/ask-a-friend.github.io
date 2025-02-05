@@ -8,13 +8,18 @@ body {
     font-size: 16px;
     justify-content: center;
     overflow: auto;
+    text-align: left;
     font-family: "IBM Plex Mono";
+    background-color: var(--color-1);
 }
 
+header {
+padding: 3px;
+z-index: 10;
+}
 
-/* Spiegelanimation für title1 (rechts) */
 .title1 { 
-  display: grid;
+  display: flex;
   font-family: "OffBitTrial-101", "IBM Plex Mono";
   margin: 50px;
   padding: 1.2% 30% 0px 0.5%; 
@@ -25,45 +30,42 @@ body {
   line-height: 0.9em;
   letter-spacing: 0.1em;
   color: var(--color-2);
-  animation: mirrorRight 0s infinite alternate;
 }
 
-/* Spiegelanimation für title2 (rechts) */
-.title2 {
+.title2 { 
+  display: flex;
   font-family: "OffBitTrial-101", "IBM Plex Mono";
   margin: 50px;
-  padding: 0px 30% 0px 0px; 
+  padding: 1.2% 30% 0px 0.5%; 
   font-weight: normal;
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
-  font-size: 200px;
-  line-height: -1em;
+  font-size: 2em;
+  line-height: 0.9em;
   letter-spacing: 0.1em;
   color: var(--color-2);
-  animation: mirrorRight 0s infinite alternate;
 }
 
 /* Spiegelanimation für title3 (links) */
 .title3 {
+  display: flex;
   font-family: "OffBitTrial-101", "IBM Plex Mono";
-  margin: 0px 50px 50px 0px;
-  padding: 0px 0px 0px 30%; 
+  margin: 50px;
+  padding: 1.2% 30% 0px 0.5%; 
   font-weight: normal;
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
-  font-size: 200px;
+  font-size: 2em;
   line-height: 0.9em;
   letter-spacing: 0.1em;
-  z-index: 1;
   color: var(--color-2);
-  animation: mirrorLeft 0s infinite alternate;
 }
 
 .aboutbox-dropdown {
   position: absolute;
   display: block;  
   left: 4%;
-  top: 50%;
+  top: 25%;
   width: 200px;
   height: 100px;
   z-index: 999;
@@ -76,7 +78,7 @@ body {
   position: absolute;
   background-color: var(--color-2);
   min-width: 362px;
-  min-height: 500px;
+  min-height: 384px;
   padding: 0% 12% 12% 10%;
   z-index: 999;
   border-radius: 25px 0px 0px 0px;
@@ -182,18 +184,25 @@ body {
 
 .bookcontainer {
   display: flex;
-  width: 80vw; /* Volle Breite des Viewports */
-  height: 60vh; 
+  width: 95vw; /* Volle Breite des Viewports */
+  height: 90vh; 
+  background-color: var(--color-1);
 }
 
 .bookleft {
   width: 50vw; /* 50% der Breite */
-  height: 100vh; /* Volle Höhe */
+  height: 90vh; /* Volle Höhe */
   background-color: var(--color-2); /* Beispiel-Hintergrundfarbe */
   display: flex;
-  justify-content: center; /* Zentriere Inhalt horizontal */
-  align-items: center; /* Zentriere Inhalt vertikal */
-  box-shadow: 20px 20px 30px grey
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 20px 20px 30px grey;
+  border-radius: 25px 0px 0px 0px;
+  column-gap: 200px; /* Abstand zwischen den Spalten */
+  margin: 25px;
+  line-height: 1.6; /* Zeilenhöhe für Lesbarkeit */
+  overflow: auto;
+  text-align: left;
 }
 
 .bookright {
@@ -201,19 +210,49 @@ body {
   height: 100vh; /* Volle Höhe */
   background-color: var(--color-1); /* Beispiel-Hintergrundfarbe */
   display: flex;
-  justify-content: center; /* Zentriere Inhalt horizontal */
-  align-items: center;
-  
+  padding: 20px;
+  overflow-x: hidden;
+
+ /* Zentriere Inhalt horizontal */
 }
+
+.discipline {
+  display: flex;
+  flex-direction: row;
+}
+
+.editorial4 {
+  font-family: "Fluxisch Else";
+  display: grid;
+  padding-left: 40%;
+  padding-right: 10px;
+  line-height: 1.6; /* Zeilenhöhe für Lesbarkeit */
+  overflow: auto;
+  text-align: left;
+}
+
+.editorial1 {
+  font-family: "Fluxisch Else";
+  display: grid;
+  width: 1fr;
+  column-count: 1; /* Anzahl der Spalten */
+  column-gap: 20px; /* Abstand zwischen den Spalten */
+  margin: 25px;
+  line-height: 1.6; /* Zeilenhöhe für Lesbarkeit */
+  overflow: auto;
+  text-align: left;
+}
+
 .post-container {
   position: relative;
   margin: 65px;
-  top: 8%
+  top: 25%
   
 }
 
 .post-box {
 position: relative;
+padding: 20px;
 border-radius: 25px 0px 0px 0px;
 border: 2px solid var(--color-1);
 background-color: var(--color-2);
@@ -222,9 +261,10 @@ background-color: var(--color-2);
 
 .box-1 {
   position: absolute;
-  margin-top: 0%;
+  margin-top: 2.5%;
   left: 50%;
-  width: 220px;
+  width: 230px;
+  min-height: 530px;
   border-radius: 25px 0px 0px 0px;
   border: 2px solid var(--color-1);
   background-color: var(--color-2);
@@ -242,10 +282,10 @@ background-color: var(--color-2);
 
   .box-2 {
   position: absolute;
-  margin-top: 2.5%;
+  margin-top: 4%;
   left: 50%;
-  width: 260px;
-  min-height: 400px;
+  width: 280px;
+  min-height: 530px;
   border-radius: 25px 0px 0px 0px;
   border: 2px solid var(--color-1);
   background-color: var(--color-2);
@@ -263,7 +303,7 @@ background-color: var(--color-2);
 position: absolute;
 margin-top: 7%;
 left: 50%;
-width: 300px;
+width: 315px;
 min-height: 400px;
 border-radius: 25px 0px 0px 0px;
 border: 2px solid var(--color-1);
@@ -274,53 +314,53 @@ z-index: 3;
 
 .box-4 {
 position: absolute;
-margin-top: 13%;
+margin-top: 10.4%;
 left: 50%;
-width: 300px;
-min-height: 400px;
+width: 250px;
+min-height: 530px;
 border-radius: 25px 0px 0px 0px;
 border: 2px solid var(--color-1);
 background-color: var(--color-2);
-transform: skewY(30deg);
+transform: skewY(25deg);
 z-index: 4;
 }
 
 .box-5 {
 position: absolute;
-margin-top: 16%;
+margin-top: 12.8%;
 left: 50%;
-width: 200px;
-min-height: 400px;
+width: 180px;
+min-height: 600px;
 border-radius: 25px 0px 0px 0px;
 border: 2px solid var(--color-1);
 background-color: var(--color-2);
-transform: skewY(50deg);
+transform: skewY(45deg);
 z-index: 5;
   }
 
 .box-6 {
   position: absolute;
-  margin-top: 16%;
+  margin-top: 12.8%;
   right: 49.9%;
-  width: 200px;
-  min-height: 400px;
+  width: 180px;
+  min-height: 530px;
   border-radius: 0px 25px 0px 0px;
   border: 2px solid var(--color-1);
   background-color: var(--color-2);
-  transform: skewY(-50deg);
+  transform: skewY(-45deg);
   z-index: 6;
   }
 
 .box-7 {
 position: absolute;
-margin-top: 13%;
+margin-top: 10.4%;
 right: 49.9%;
-width: 300px;
-min-height: 400px;
+width: 250px;
+min-height: 530px;
 border-radius: 0px 25px 0px 0px;
 border: 2px solid var(--color-1);
 background-color: var(--color-2);
-transform: skewY(-30deg);
+transform: skewY(-25deg);
 z-index: 5;
 }
 
@@ -328,8 +368,8 @@ z-index: 5;
 position: absolute;
 margin-top: 7%;
 right: 49.9%;
-width: 350px;
-min-height: 400px;
+width: 315px;
+min-height: 530px;
 border-radius: 0px 25px 0px 0px;
 border: 2px solid var(--color-1);
 background-color: var(--color-2);
@@ -339,179 +379,179 @@ z-index: 4;
 
 .box-9 {
 position: absolute;
-margin-top: 15%;
-right: 49.9%;
-width: 300px;
-min-height: 400px;
-border-radius: 0px 25px 0px 0px;
+margin-top: 52%;
+left: 50%;
+width: 315px;
+min-height: 530px;
+border-radius: 25px 0px 0px 0px;
 border: 2px solid var(--color-1);
 background-color: var(--color-2);
-transform: skewY(10deg);
-z-index:3;
+transform: skewY(20deg);
+z-index: 3;
 }
 
 .box-10 {
   position: absolute;
-  margin-top: 40%;
-  left: 50%;
-  width: 250px;
-  border-radius: 25px 0px 0px 0px;
-  border: 2px solid var(--color-1);
-  background-color: var(--color-2);
-  transform: skewY(-20deg);
-  z-index: 1;
-  }
-
-  .box-11 {
-  position: absolute;
-  margin-top: 2.5%;
-  left: 50%;
-  width: 300px;
-  min-height: 400px;
-  border-radius: 25px 0px 0px 0px;
-  border: 2px solid var(--color-1);
-  background-color: var(--color-2);
-  transform: skewY(-10deg);
-  z-index: 2;}
-  
-  .box-11:hover {
-    margin-top: 7%;
-    width: 350px;
-    transform: skewY(5deg);
-    z-index: 7;
-  }
-  
-.box-12 {
-position: absolute;
-margin-top: 7%;
-left: 50%;
-width: 350px;
-min-height: 400px;
-border-radius: 25px 0px 0px 0px;
-border: 2px solid var(--color-1);
-background-color: var(--color-2);
-transform: skewY(5deg);
-z-index: 3;
-}
-
-.box-13 {
-position: absolute;
-margin-top: 13%;
-left: 50%;
-width: 300px;
-min-height: 400px;
-border-radius: 25px 0px 0px 0px;
-border: 2px solid var(--color-1);
-background-color: var(--color-2);
-transform: skewY(30deg);
-z-index: 4;
-}
-
-.box-14 {
-position: absolute;
-margin-top: 16%;
-left: 50%;
-width: 200px;
-min-height: 400px;
-border-radius: 25px 0px 0px 0px;
-border: 2px solid var(--color-1);
-background-color: var(--color-2);
-transform: skewY(50deg);
-z-index: 5;
-  }
-
-.box-15 {
-  position: absolute;
-  margin-top: 16%;
+  margin-top: 58%;
   right: 49.9%;
-  width: 200px;
-  min-height: 400px;
+  width: 315px;
   border-radius: 0px 25px 0px 0px;
   border: 2px solid var(--color-1);
   background-color: var(--color-2);
-  transform: skewY(-50deg);
-  z-index: 6;
+  transform: skewY(-5deg);
+  z-index: 2;
   }
 
-.box-16 {
+.box-11 {
 position: absolute;
-margin-top: 13%;
+margin-top: 62%;
 right: 49.9%;
-width: 300px;
-min-height: 400px;
+width: 250px;
+min-height: 530px;
 border-radius: 0px 25px 0px 0px;
 border: 2px solid var(--color-1);
 background-color: var(--color-2);
-transform: skewY(-30deg);
-z-index: 5;
-}
-
-.box-17 {
-position: absolute;
-margin-top: 15%;
-top: 109%;
-right: 49.9%;
-width: 350px;
-min-height: 400px;
-border-radius: 0px 25px 0px 0px;
-border: 2px solid var(--color-1);
-background-color: var(--color-2);
-transform: skewY(-5deg); 
+transform: skewY(-25deg); 
 z-index: 4;
 }
 
-.box-18 {
-position: absolute;
-margin-top: 15%;
-top: 102%;
-right: 49.9%;
-width: 300px;
-min-height: 400px;
-border-radius: 0px 25px 0px 0px;
-border: 2px solid var(--color-1);
-background-color: var(--color-2);
-transform: skewY(10deg);
-z-index: 3;
-}
+.box-12 {
+  position: absolute;
+  margin-top: 65%;
+  right: 49.9%;
+  width: 180px;
+  min-height: 600px;
+  border-radius: 0px 25px 0px 0px;
+  border: 2px solid var(--color-1);
+  background-color: var(--color-2);
+  transform: skewY(-45deg);
+  z-index: 6;
+  }
 
+  .box-13 {
+    position: absolute;
+    margin-top: 95%;
+    left: 50%;
+    width: 230px;
+    min-height: 530px;
+    border-radius: 25px 0px 0px 0px;
+    border: 2px solid var(--color-1);
+    background-color: var(--color-2);
+    transform: skewY(-20deg);
+    z-index: 1;
+    }
+    
+  .box-14 {
+    position: absolute;
+    margin-top: 100%;
+    left: 50%;
+    width: 315px;
+    min-height: 400px;
+    border-radius: 25px 0px 0px 0px;
+    border: 2px solid var(--color-1);
+    background-color: var(--color-2);
+    transform: skewY(5deg);
+    z-index: 3;
+    }
+
+  .box-15 {
+    position: absolute;
+    margin-top: 104%;
+    left: 50%;
+    width: 250px;
+    min-height: 530px;
+    border-radius: 25px 0px 0px 0px;
+    border: 2px solid var(--color-1);
+    background-color: var(--color-2);
+    transform: skewY(25deg);
+    z-index: 4;
+    }
+
+    
+      .box-1:hover {
+        margin-top: 7%;
+        width: 350px;
+        transform: skewY(5deg);
+        z-index: 7;
+      }
+    
+      
+      .box-2:hover {
+        margin-top: 7%;
+        width: 350px;
+        transform: skewY(5deg);
+        z-index: 7;
+      }
+      
+   
+    
+    .box-16 {
+    position: absolute;
+    margin-top: 10.4%;
+    left: 50%;
+    width: 250px;
+    min-height: 530px;
+    border-radius: 25px 0px 0px 0px;
+    border: 2px solid var(--color-1);
+    background-color: var(--color-2);
+    transform: skewY(25deg);
+    z-index: 4;
+    }
+    
+    .box-17 {
+    position: absolute;
+    margin-top: 12.8%;
+    left: 50%;
+    width: 180px;
+    min-height: 600px;
+    border-radius: 25px 0px 0px 0px;
+    border: 2px solid var(--color-1);
+    background-color: var(--color-2);
+    transform: skewY(45deg);
+    z-index: 5;
+      }
+    
 .fan {
   position: absolute;
-  margin-top: -1%;
+  margin-top: 0.5%;
   left: 50%;
   min-height: 400px;
-  width: 230px;
+  width: 160px;
   border-radius: 25px 0px 0px 0px;
   border: 1.5px solid var(--color-2);
   background-color: var(--color-1);
-  transform: skewY(-25deg);
+  transform: skewY(-40deg);
   z-index: 0;  
 }
 
 .fan-1 {
   position: absolute;
-  margin-top: -2%;
+  margin-top: 0.5%;
   left: 50%;
   min-height: 400px;
-  width: 220px;
+  width: 150px;
   border-radius: 25px 0px 0px 0px;
   border: 1.5px solid var(--color-2);
   background-color: var(--color-1);
-  transform: skewY(-30deg);
+  transform: skewY(-42deg);
   z-index: 0;  
 }
 
 .fan-2 {
   position: absolute;
-  margin-top: -3%;
+  margin-top: 0.5%;
   left: 50%;
   min-height: 400px;
-  width: 200px;
+  width: 140px;
   border-radius: 25px 0px 0px 0px;
   border: 1.5px solid var(--color-2);
   background-color: var(--color-1);
-  transform: skewY(-35deg);
+  transform: skewY(-44deg);
   z-index: 0;  
 }
+
+
+
 
 .hidden-child {
     opacity: 0;
@@ -534,7 +574,7 @@ z-index: 3;
     flex-wrap: wrap;
     background-color: var(--color-2);
     flex-direction: row;
-    padding-left: 20px;
+    padding-left:0px;
     color: inherit;
 }
 
@@ -552,13 +592,14 @@ img:hover {
 .crossword {
   display: grid;
   justify-content: center;
-  
   grid-template-columns: repeat(10, 9%);
   padding-left: 37.5%;
   grid-auto-rows: 24%;
   gap: 0px;
   margin: 0px;
+  
 }
+
 @media (max-width: 768px) {
 .crossword {
     scale: 0.8; 
@@ -566,6 +607,18 @@ img:hover {
     z-index: 1;
 }
 }
+
+.crossword2 {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(6, 9%);
+  padding-left: 37.5%;
+  grid-auto-rows: 24%;
+  gap: 0px;
+  margin: 0px;
+  
+}
+
 
 .cell {
   width: 60px;
@@ -608,8 +661,10 @@ opacity: 1;
 
 
 img {
-    width: 200px;
-    padding: 20px;
+    width: 150px;
+    padding: 0px;
+    padding-bottom: 30px;
+    border-radius: 15px 0px 0px 0px;
   }
 
   .imgcredit {
@@ -630,39 +685,44 @@ img {
   }
 
   .button {
+    font-family: "Fluxisch Else";
     border-radius: 25px;
-    border: 1px;
-    border-style: dotted;
+    border-style: dashed;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-width: 1px;
     border-color: var(--color-1);
-    background: var(--color-1);
-    width: 70px;
+    background: var(--color-2);
+    width: fit-content;
     height: 25px;
-    color:var(--color-2);
+    color: var(--color-1);
     text-align: center;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 1em;
     text-transform: lowercase;
     line-height: 1em;
-    transform: rotate(25deg); /* Dreht den Text */
+    transform: rotate(0deg); /* Dreht den Text */
     z-index: 1;
     
   }
   
   .button:hover {
-    border-radius: 25px;
-    border-style: dotted;
-    border-width: 1px;
+    font-family: "Fluxisch Else";
+    border: 2px;
+    border-style: dashed;
+    padding-left: 6px;
+    padding-right: 6px;
     border-color: var(--color-1);
-    background: var(--color-2);
-    width: 70px;
+    background: var(--color-1);
+    width: fit-content;
     height: 25px;
-    color: var(--color-1);
+    color:var(--color-2);
     text-align: center;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 1em;
     text-transform: lowercase;
     line-height: 1em;
-    transform: rotate(25deg); /* Dreht den Text */
+    transform: rotate(-12deg); /* Dreht den Text */
     z-index: 1;
     cursor: crosshair;
   }
@@ -690,23 +750,6 @@ img {
     width:50vw
   }
 
-  .editorial4 {
-  column-count: 4; /* Anzahl der Spalten */
-  column-gap: 20px; /* Abstand zwischen den Spalten */
-  margin: 20px;
-  line-height: 1.6; /* Zeilenhöhe für Lesbarkeit */
-}
-
-@media (max-width: 480px) {
-  .editorial4 {
-    column-count: 1; /* Einzelne Spalte auf Smartphones */
-  }
-}
-.editorial4 p {
-  text-align: justify; /* Text ausrichten */
-  margin: 0 0 1em; /* Abstand zwischen Absätzen */
-}
-
 .inline-image {
   display: block;
   margin: 10px auto; /* Bild zentrieren */
@@ -730,8 +773,8 @@ p {
   padding: 0px 0px;
   font-weight: normal;
   text-align:left;
-  font-size: 16px;
-  line-height: 1.15em;
+  font-size: 17px;
+  line-height: 1.45em;
   color: var(--color-1);
 }
 
@@ -748,24 +791,36 @@ h1 {
 
   h2 {
   font-family: "OffBitTrial-101";
-  padding-left: 20px;
+  margin: 0px;
+  padding-left: 0px;
   font-weight: normal;
   text-align: left;
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 2em;
   line-height: 1em;
   color: var(--color-1);
 }
 
 h3 {
   font-family: "Fluxisch Else";
+  margin: 0px 0px 50px;
   font-weight: normal;
   text-align: left;
   text-transform: uppercase;
   font-size: 1.6em;
   line-height: 1em;
   color: var(--color-1);
-  
+}
+
+h4 {
+  font-family: "Fluxisch Else";
+  margin: 0px 0px 15px;
+  font-weight: normal;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  line-height: 1em;
+  color: var(--color-1);
 }
 
    h6 {
