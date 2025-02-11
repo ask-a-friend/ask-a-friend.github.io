@@ -27,7 +27,7 @@
                     .st0 {
                       fill: none;
                       stroke: #d0def9;
-                      stroke-width: 4px;
+                      stroke-width: 6px;
                     }
                   </style>
                 </defs>
@@ -47,7 +47,7 @@
 
   <div class="parent"> 
       <div class="crossword">
-         <div class="cell hidden"></div>
+         
          <div class="cell hidden"></div>
          <div class="cell hidden"></div>
          <div class="cell"><span class="letter">F</span></div>
@@ -58,7 +58,7 @@
          <div class="cell"><span class="letter">E</span></div>
          <div class="cell hidden"></div>
          
-         <div class="cell hidden"></div>
+         
          <div class="cell"><span class="letter">P</span></div>
          <div class="cell"><span class="letter">O</span></div>
          <div class="cell"><span class="letter">S</span></div>
@@ -69,7 +69,7 @@
          <div class="cell"><span class="letter">N</span></div>
          <div class="cell"><span class="letter">S</span></div>
       
-       <div class="cell hidden"></div>
+       
          <div class="cell hidden"></div>
          <div class="cell hidden"></div>
          <div class="cell"><span class="letter">I</span></div>
@@ -80,7 +80,7 @@
          <div class="cell hidden"></div>
          <div class="cell hidden"></div>
          
-         <div class="cell hidden"></div>
+        
          <div class="cell hidden"></div>
          <div class="cell"><span class="letter">D</span></div>
          <div class="cell"><span class="letter">E</span></div>
@@ -107,14 +107,14 @@
         <div class="button">E-Mail senden</div></a></p>
         </div>
         <svg id="Ebene_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 862 453">
-                <defs><style>.cls-1{fill:none;stroke:var(--color-2);;stroke-miterlimit:10;stroke-width:7px;}</style></defs>
+                <defs><style>.cls-1{fill:none;stroke:var(--color-2);;stroke-miterlimit:10;stroke-width:13px;}</style></defs>
                 <path class="cls-1" d="M588.78,93.67c-130.74-28.64-267.11-31.31-398.87-7.82-33.96,6.05-68.51,14.2-97.04,33.59-28.53,19.39-50.12,52.3-47.18,86.67,3.63,42.35,41.25,73.11,78.01,94.45,94.21,54.71,203.45,82.1,312.4,82.69,108.94.59,217.47-25.23,316.41-70.83,16.31-7.52,32.63-15.74,45.81-27.94,13.19-12.2,23.05-29.01,23.25-46.97.3-27.34-21.03-50.01-43.41-65.72-61.46-43.16-138.55-57.11-213.38-63.5-76.1-6.49-152.77-6.29-228.83.59-49.93,4.52-101.25,12.49-143.78,39.03"/>
                 </svg>            
    </div>
    </div>
-    <div class="archive">
-    Visit <br> the <br> Archiv
-    </div>
+ 
+    <a href="/archive"><div class="archive"></div> Visit <br> the <br> Archiv</div></a>
+    
     
    <ul id="post-container">
     <div class="fan-2"></div> 
@@ -409,7 +409,7 @@
     window.addEventListener("load", () => {
       setTimeout(() => {
         document.querySelector('.title2').classList.add('show');
-      }, 1000); // 1 Sekunde Verzögerung
+      }, 500); // 1 Sekunde Verzögerung
     });
     // JavaScript: Fügt die Klasse "persistent" hinzu, wenn die Zelle gehovt wird
     const cells = document.querySelectorAll(".cell");

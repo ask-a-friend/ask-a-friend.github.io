@@ -58,7 +58,7 @@ main {
   color: transparent;
   z-index: 1;
   opacity: 0;
-  transition: opacity 2s ease-in;
+  transition: opacity 1s ease-in;
 }
 
 .title2.show {
@@ -79,6 +79,23 @@ main {
   line-height: 0.9em;
   letter-spacing: 0.1em;
   color: var(--color-2);
+}
+
+@media (max-width: 780px) {
+  .title1, .title2, .title3 {
+    font-size: 7em; /* Noch kleinere Schriftgröße für sehr kleine Displays */
+    padding: 4% 5% 0 5%; /* Weniger Padding für kleine Geräte */
+  }
+  
+  .title2 {
+    top: 15%;
+    left: 5%;
+  }
+
+  .title3 {
+    left: 5%;
+    top: 27%;
+  }
 }
 
 .title4 {
@@ -123,6 +140,19 @@ main {
   border-radius: 25px 0px 0px 0px;
   
 }
+@media (max-width: 480px) {
+  .aboutbox-dropdown {
+    position: absolute;
+    display: block;  
+    left: 4%;
+    top: 100%;
+    width: 200px;
+    height: 100px;
+    z-index: 999;
+    border-radius: 25px 0px 0px 0px;
+    
+  }
+}
 
 .aboutbox-dropdown-content {
   display: none;
@@ -136,6 +166,21 @@ main {
   box-shadow: 0px 0px 60px 20px var(--color-1); 
   mix-blend-mode: multiply;
 }
+
+@media (max-width: 480px) {
+  .aboutbox-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--color-2);
+    min-width: 70vw;
+    min-height: 384px;
+    padding: 12% 12% 12% 10%;
+    z-index: 999;
+    border-radius: 25px 0px 0px 0px;
+    box-shadow: 0px 0px 60px 20px var(--color-1); 
+    mix-blend-mode: multiply;
+  }
+  }
 
 .aboutbox-dropdown:hover .aboutbox-dropdown-content {
   display: block;
@@ -328,9 +373,8 @@ ul {
   position: relative;
   margin: 70px;
   top: 60%;
-  
-  
 }
+
 
 .post-box {
 position: relative;
@@ -338,8 +382,19 @@ padding: 20px;
 border-radius: 25px 0px 0px 0px;
 border: 2px solid var(--color-1);
 background-color: var(--color-2);
-
 }
+
+@media (max-width: 480px) { 
+  .post-box {
+    position: absolute;
+    top: 150%;
+    padding: 20px;
+   scale: 0.4;
+    border-radius: 25px 0px 0px 0px;
+    border: 2px solid var(--color-1);
+    background-color: var(--color-2);
+    }
+  }
 
 .box-1 {
   position: absolute;
@@ -693,7 +748,7 @@ img:hover {
 .crossword {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(10, 9%);
+  grid-template-columns: repeat(9, 10%);
   padding-left: 37.5%;
   grid-auto-rows: 24%;
   gap: 0px;
@@ -702,16 +757,17 @@ img:hover {
   
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
 .crossword {
-    scale: 0.8; 
+    scale: 0.65; 
     margin: 0;
     z-index: 1;
+    padding-left: 0%;
+    margin-top:115%;
 }
 }
 
 .crosswordsocial {
-
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(6, 15%);
@@ -895,6 +951,8 @@ h6 {
   font-size: 1.4em;
   line-height: 1em;
   text-align: left;
+  padding-bottom: 40%;
+  padding-top: 20%;
   justify-content: center;
   text-transform: uppercase;
   z-index: 1;
