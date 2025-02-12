@@ -26,6 +26,14 @@ main {
   animation: colorChange 120s infinite alternate;
 }
 
+.impressum {
+  position: fixed;
+  top: 3.2%;
+  right: 2%;
+  color: transparent;
+}
+
+
 .title1 { 
   position: fixed;
   top: 3.2%;
@@ -115,18 +123,20 @@ main {
 
 .archive {
   position: absolute;
-  top: 120%;
-  left: 25%;
+  top: 114%;
+  left: 49%;
   font-family: "OffBitTrial-101", "IBM Plex Mono";
   margin: 20px;
   padding: 1.2% 30% 0px 0.5%; 
   font-weight: normal;
   text-align: left;
   text-transform: uppercase;
-  font-size: 2.5em;
+  font-size: 2em;
   line-height: 0.9em;
   letter-spacing: 0.1em;
   color: var(--color-2);
+  z-index: 2;
+  cursor: crosshair;
 }
 
 .aboutbox-dropdown {
@@ -138,8 +148,8 @@ main {
   height: 100px;
   z-index: 999;
   border-radius: 25px 0px 0px 0px;
-  
 }
+
 @media (max-width: 480px) {
   .aboutbox-dropdown {
     position: absolute;
@@ -186,6 +196,33 @@ main {
   display: block;
 }
 
+.impressumbox-dropdown {
+  position: absolute;
+  display: block;  
+  right: 3%;
+  top: 5%;
+  width: 110px;
+  height: 100px;
+  z-index: 999;
+  border-radius: 25px 0px 0px 0px;
+}
+
+.impressumbox-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--color-2);
+  min-width: 100px;
+  min-height: 384px;
+  padding: 12% 12% 12% 10%;
+  z-index: 999;
+  border-radius: 25px 0px 0px 0px;
+  box-shadow: 0px 0px 60px 20px var(--color-1); 
+  mix-blend-mode: multiply;
+}
+
+.impressumbox-dropdown:hover .impressumbox-dropdown-content {
+  display: block;
+}
 
 .abouttypo {
   font-family: "Fluxisch Else";
@@ -204,7 +241,7 @@ main {
 .grandparent {
   background-color: var(--color-1);
   animation: colorChange 120s infinite alternate;
-  background-image: url("/XXassets/img/Background/Layout_Background-dunkel-3.jpg");
+  background-image: url("/assets/img/Background/Layout_Background-dunkel-3.jpg");
   background-size: cover; /* Skaliert das Bild, sodass es den gesamten Bereich ausfüllt */
   mix-blend-mode: lighten;
   width: 100vw;
@@ -372,13 +409,14 @@ ul {
 .post-container {
   position: relative;
   margin: 70px;
-  top: 60%;
+  top: 90%;
 }
 
 
 .post-box {
 position: relative;
 padding: 20px;
+top: 130%;
 border-radius: 25px 0px 0px 0px;
 border: 2px solid var(--color-1);
 background-color: var(--color-2);
@@ -951,8 +989,8 @@ h6 {
   font-size: 1.4em;
   line-height: 1em;
   text-align: left;
-  padding-bottom: 40%;
-  padding-top: 20%;
+  padding-bottom: 20%;
+  padding-top: 60%;
   justify-content: center;
   text-transform: uppercase;
   z-index: 1;
