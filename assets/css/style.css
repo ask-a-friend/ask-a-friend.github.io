@@ -120,7 +120,7 @@ main {
   color: var(--color-2);
 }
 
-@kxxeyframes moveAcrossScreen {
+@keyframes moveAcrossScreen {
   0% { left: 0; }
   25% { top: 90%; }
   50% { left: 49%; }
