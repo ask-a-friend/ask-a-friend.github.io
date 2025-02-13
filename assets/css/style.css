@@ -120,7 +120,7 @@ main {
   color: var(--color-2);
 }
 
-@keyframes moveAcrossScreen {
+@kxxeyframes moveAcrossScreen {
   0% { left: 0; }
   25% { top: 90%; }
   50% { left: 49%; }
@@ -485,6 +485,7 @@ ul {
   position: relative;
   margin: 70px;
   top: 90%;
+  background-color: var(--color-1);
  
 }
 
@@ -985,12 +986,13 @@ opacity: 1;
     transform: rotate(-12deg); /* Dreht den Text */
     z-index: 1;
     cursor: crosshair;
-    animation: colorChange 120s infinite alternate;
+  
     
   }
   
   .button:active {
     transform: scale(0.95);
+    background: var(--color-1);
   }
   
   .ibm-plex-mono-regular {
