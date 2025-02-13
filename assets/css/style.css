@@ -237,9 +237,8 @@ main {
 .grandparent {
   background-color: var(--color-1);
   animation: colorChange 120s infinite alternate;
-  background-image: url("/XXassets/img/Background/Layout_Background-dunkel-3.jpg");
+  background-image: url("XX/assets/img/Background/Layout_Background-test.png");
   background-size: cover; /* Skaliert das Bild, sodass es den gesamten Bereich ausfüllt */
-  mix-blend-mode: lighten;
   width: 100vw;
     height: 100vh;
     margin: 0px;
@@ -731,7 +730,7 @@ z-index: 4;
 
   .box-13 {
     position: absolute;
-    margin-top: 115%;
+    margin-top: 120%;
     left: 50%;
     width: 19%;
     border-radius: 25px 0px 0px 0px;
@@ -744,7 +743,7 @@ z-index: 4;
 
   .box-14 {
     position: absolute;
-    margin-top: 120%;
+    margin-top: 125%;
     left: 50%;
     width: 21%;
     border-radius: 25px 0px 0px 0px;
@@ -755,7 +754,7 @@ z-index: 4;
 
   .box-15 {
     position: absolute;
-    margin-top: 124%;
+    margin-top: 129%;
     left: 50%;
     width: 18%;
     border-radius: 25px 0px 0px 0px;
@@ -764,27 +763,15 @@ z-index: 4;
     z-index: 4;
     }
     
-    .box-16 {
-    position: absolute;
-    margin-top: 10.4%;
-    left: 50%;
-    width: 250px;
-    border-radius: 25px 0px 0px 0px;
-    background-color: var(--color-2);
-    transform: skewY(25deg);
-    z-index: 4;
+    .box-13:hover, .box-14:hover, .box-15:hover {
+      margin-top: 125%;
+      opacity: 100%;
+      width: 21%;
+      transform: skewY(5deg);
+      z-index: 7;
+      transition: 0.8s ease-in;
+      cursor: crosshair;
     }
-    
-    .box-17 {
-    position: absolute;
-    margin-top: 12.8%;
-    left: 50%;
-    width: 180px;
-    border-radius: 25px 0px 0px 0px;
-    background-color: var(--color-2);
-    transform: skewY(45deg);
-    z-index: 5;
-      }
     
 .fan {
   position: absolute;
@@ -875,7 +862,7 @@ z-index: 4;
 }
 
 img {
-  max-width: 150px;
+  max-width: 250px;
   border-radius: 0px 0px 0px 0px;
 }
 
@@ -1117,6 +1104,19 @@ h5 {
   color: var(--color-1);
 }
 
+.h9 {
+  font-family: "Fluxisch Else";
+  margin: 0px;
+  font-weight: normal;
+  font-size: 1.5em;
+  line-height: 1.1em;
+  text-align: left;
+  padding-bottom: 20%;
+  padding-top: 40%;
+  justify-content: center;
+  z-index: 1;
+  color: var(--color-1);
+}
 
 h3 {
   font-family: "Fluxisch Else";
@@ -1162,12 +1162,14 @@ h8 {
   color: var(--color-2);
 }
 
+
+
 :root {
-  --color-1: rgb(0, 0, 0);
+  --color-1: rgb(0, 0, 21);
   --color-2: rgb(207, 221, 250);
 }
 
 @keyframes colorChange {
-  0% { --color-1: rgb(185, 92, 255); } 
-  100% { --color-1: rgb(0, 0, 0); }   
+  0% { --color-1: rgb(161, 73, 249); } 
+  100% { --color-1: rgb(0, 0, 21); }   
 }
