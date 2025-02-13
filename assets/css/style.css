@@ -22,16 +22,15 @@ background-color: var(--color-1);
 animation: colorChange 120s infinite alternate;
 }
 
+footer {
+position: fixed;
+bottom: 0%;
+right: 1.5%;
+}
+
 main {
   background-color: var(--color-1);
   animation: colorChange 120s infinite alternate;
-}
-
-.impressum {
-  position: fixed;
-  top: 3.2%;
-  right: 2%;
-  color: transparent;
 }
 
 
@@ -75,7 +74,7 @@ main {
 }
 
 .title3 {
-  position: absolute;
+  position: fixed;
   top: 3.2%;
   left: 31%;
   font-family: "OffBitTrial-101", "IBM Plex Mono";
@@ -189,49 +188,62 @@ main {
 
 .aboutbox-dropdown:hover .aboutbox-dropdown-content {
   display: block;
-}
-
-.impressumbox-dropdown {
-  position: absolute;
-  display: block;  
-  right: 3%;
-  top: 5%;
-  width: 110px;
-  height: 100px;
-  z-index: 999;
-  border-radius: 25px 0px 0px 0px;
-}
-
-.impressumbox-dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: var(--color-2);
-  min-width: 100px;
-  min-height: 384px;
-  padding: 12% 12% 12% 10%;
-  z-index: 999;
-  border-radius: 25px 0px 0px 0px;
-  box-shadow: 0px 0px 60px 20px var(--color-1); 
-  mix-blend-mode: multiply;
-  animation: colorChange 120s infinite alternate;
-    
-}
-
-.impressumbox-dropdown:hover .impressumbox-dropdown-content {
-  display: block;
+  cursor: crosshair;
 }
 
 .abouttypo {
   font-family: "Fluxisch Else";
-  font-size: 1.6em;
+  font-size: 1.8em;
   position: absolute;
   left: 30%;
-  top:25%;
+  top:27%;
   font-weight: normal;
   text-align: center;
   z-index: 1;
   color:var(--color-2);
 }
+
+.impressumbox-dropdown {
+  position: absolute;
+  display: block;  
+  width: 50px;
+  height: 100px;
+  z-index: 999;
+  right: 20%;
+  bottom: 0%;
+  border-radius: 25px 0px 0px 0px;
+  background-color: var(--color-1);
+  color: var(--color-1);
+}
+
+.impressumbox-dropdown-content {
+  display: none;
+  position: relative;
+  right: 230%; 
+  bottom: 80%;
+  background-color: var(--color-1);
+  color: var(--color-1);
+  animation: colorChange 120s infinite alternate;
+  z-index: 99;
+    
+}
+
+.impressumbox-dropdown:hover .impressumbox-dropdown-content {
+  display: block;
+  cursor: crosshair;
+}
+
+.impressumtypo {
+  font-family: "Fluxisch Else";
+  font-size: 0.56em;
+  position: absolute;
+  font-weight: normal;
+  text-align: center;
+  z-index: 1;
+  color:var(--color-2);
+  transform: rotate(90deg);
+}
+
 
 
 .grandparent {
@@ -252,36 +264,7 @@ main {
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content:space-between;
-    z-index: 0;
-    
-}
-
-.child-container1 {
-    background-color: var(--color-1);
-    width: 80vw;
-    height: 35vh;
-    margin: 0px;
-    text-align: center;
-    line-height: 50px;
-    font-size: 10px;
-    overflow:hidden;
-  }
-
-.child-container2 {
-    background-color: var(--color-2);
-    width: 40vw;
-    height: 90vh;
-    margin: 65px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-    line-height: 50px;
-    top: 0px;
-    left: 0px;
-    font-size: 10px;
-    overflow: auto;
-    border-radius: 25px 0px 0px 0px;
-    z-index:1; 
+    z-index: 0;  
 }
 
 @media (max-width: 780px) {
@@ -289,25 +272,6 @@ main {
       flex-direction: column; /* Flexbox-Anordnung vertikal */
       justify-content: center; /* Zentriert die Container */
       align-items: center; /* Zentriert horizontal */
-  }
-
-  .child-container1 {
-      width: 90vw; /* Breite anpassen für kleinere Bildschirme */
-      margin: 0px 0; /* Vertikaler Abstand */
-      order: 1; /* Child-Container 1 immer zuerst */
-      overflow: hidden;
-      border-radius: 0px 0px 0px 0px;
-      
-  }
-
-  .child-container2 {
-      width: 90vw; /* Breite anpassen für kleinere Bildschirme */
-      margin: 0px 0; /* Vertikaler Abstand */
-      order: 2; /* Child-Container 2 immer nach Container 1 */
-      overflow: hidden;
-      border-radius: 0px 0px 0px 0px;
-      z-index:0
-      
   }
 }
 
@@ -366,9 +330,10 @@ main {
   display: flex;
   justify-content: center;
   max-width: 80%;
-  align-items: self-end;
+  align-items: self-start;
   padding-top: 3.6em;
   padding-right: 4em;
+  padding-left: 0.5em;
   font-size: 1em;
   line-height: 1.48em;
   border-radius: 8px;
@@ -414,14 +379,13 @@ main {
             justify-content: center;
             text-align: center;
             padding: 2.5%;
-            mix-blend-mode:luminosity;
             transition: mix-blend-mode 0.5s ease;
-            z-index: 60;
+            z-index: 3;
         }
 
         /* Hover-Effekt: Wechsel des blend-mode */
         .grid-container:hover .modal {
-            mix-blend-mode:normal;
+            mix-blend-mode: normal;
         }
 
         /* Großes Bild */
@@ -432,16 +396,14 @@ main {
             border-radius: 0px;
             margin-right: 10px;
             margin-left: 10px;
+            
         }
 
         /* Schließen-Button */
         .modal a {
-            display: block;
-          
-        
-          
+            display: block; 
         }
-
+        
         /* Wenn das Ziel (target) erreicht wird, zeige das Modal */
         #img1:target,
         #img2:target,
@@ -450,7 +412,14 @@ main {
         #img5:target,
         #img6:target,
         #img7:target,
-        #img8:target {
+        #img8:target
+        #img9:target
+        #img10:target
+        #img11:target
+        #img12:target
+        #img13:target
+        #img14:target
+         {
             display: flex;
         }
 
@@ -523,7 +492,10 @@ ul {
 .post-box {
 position: relative;
 opacity: 0.65;
-padding: 20px;
+padding-left: 20px;
+padding-bottom: 20px;
+padding-right: 20px;
+padding-top: 20px;
 top: 130%;
 border-radius: 25px 0px 0px 0px;
 border: 2px solid var(--color-1);
@@ -575,7 +547,7 @@ min-height: 50%;
     cursor: crosshair;
   }
 
-  .box-2:hover, .box-4:hover, .box-5:hover {
+  .box-1:hover, .box-2:hover, .box-4:hover, .box-5:hover {
     margin-top: 7%;
     opacity: 100%;
     width: 21%;
@@ -775,7 +747,7 @@ z-index: 4;
     
 .fan {
   position: absolute;
-  margin-top: 2%;
+  margin-top: 4%;
   left: 50%;
   min-height: 330%;
   width: 11%;
@@ -799,7 +771,7 @@ z-index: 4;
 }
 
 .fan:hover {
-  margin-top: 7%;
+  margin-top: 9%;
   width: 13%;
   transform: skewY(5deg);
   z-index: 4;
@@ -807,7 +779,7 @@ z-index: 4;
 
 .fan-1 {
   position: absolute;
-  margin-top: 2%;
+  margin-top: 4%;
   left: 50%;
   min-height: 400px;
   padding-left: 1%;
@@ -821,7 +793,7 @@ z-index: 4;
 
 .fan-2 {
   position: absolute;
-  margin-top: 2%;
+  margin-top: 4%;
   left: 50%;
   padding-left: 1%;
   min-height: 400px;
@@ -862,7 +834,7 @@ z-index: 4;
 }
 
 img {
-  max-width: 250px;
+  max-width: 300px;
   border-radius: 0px 0px 0px 0px;
 }
 
@@ -894,10 +866,10 @@ img:hover {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(9, 10%);
-  padding-left: 37.5%;
+  padding-left: 20%;
   grid-auto-rows: 24%;
   gap: 0px;
-  margin-top: 16.6%;
+  margin-top: 42%;
  
   
 }
@@ -1066,6 +1038,7 @@ h1 {
 }
 
   h2 {
+  position: relative;
   font-family: "OffBitTrial-101";
   margin-top: 0px;
   font-weight: normal;
@@ -1094,11 +1067,11 @@ h5 {
   font-family: "Fluxisch Else";
   margin: 0px;
   font-weight: normal;
-  font-size: 1.5em;
+  font-size: 2.4em;
   line-height: 1.1em;
   text-align: left;
-  padding-bottom: 20%;
-  padding-top: 40%;
+  padding-bottom: 10%;
+  padding-top: 15%;
   justify-content: center;
   z-index: 1;
   color: var(--color-1);
