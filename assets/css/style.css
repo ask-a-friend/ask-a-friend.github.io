@@ -356,6 +356,27 @@ main {
   text-align: left;
 }
 
+
+@media (max-width: 500px) {
+.bookcontainer {
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+  padding: 20px;
+}
+
+.bookleft {
+  width: 90vw;
+  height: auto;
+  margin: 20px auto;
+  box-shadow: none;
+  border-radius: 15px;
+  overflow: auto;
+  text-align: left;
+}
+}
+
+
 .bookright {
   width: 50vw; /* 50% der Breite */
   height: 100vh; /* Volle Höhe */
