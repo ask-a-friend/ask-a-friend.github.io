@@ -969,23 +969,24 @@ z-index: 4;
 }
 
 @media (max-width: 500px) {
-  .box-1, .box-2, .box-3, .box-4, .box-5, .box-6, .box-7, .box-8, .box-9, .box-10, .box-11, .box-12, .box-13, .box-14, .box-15, .fan, .fan-1, .fan-2 {
-    width: 40%;
-    left: 30%;
-    margin-top: 5%;
-  }
-
-  .box-3:hover, .box-4:hover, .box-5:hover, .box-6:hover, .box-7:hover, .box-8:hover, .box-9:hover, .box-10:hover, .box-11:hover, .box-12:hover, .box-13:hover, .box-14:hover, .box-15:hover, .fan:hover {
-    transform: skewY(0deg);
-    width: 45%;
+  .box-1, .box-2, .box-3, .box-4, .box-5, .box-6, .box-7, .box-8, .box-9, .box-10, .box-11, .box-12, .box-13, .box-14, .box-15, .fan-1, .fan-2 {
+    display: none;
   }
 
   .fan {
     font-size: 1.2em;
     line-height: 1.2em;
+    width: 60%;
+    left: 20%;
+    transition: 0.3s ease-in-out;
+  }
+
+  .fan:hover {
+    transform: scale(1.05);
+    left: 18%;
+    width: 64%;
   }
 }
-
 
 
 .hidden-child {
