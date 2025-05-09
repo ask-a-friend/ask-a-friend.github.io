@@ -11,7 +11,14 @@
 
   </head>
 <body>
-  
+  <script>
+    document.addEventListener("click", function(event) {
+        const iframe = document.querySelector("iframe");
+        if (iframe && !iframe.contains(event.target)) {
+            iframe.src = iframe.src; // Stoppt den iframe, indem er neu geladen wird
+        }
+    });
+    </script>
     <header>
       <div class="button"><a href="/index.html">
         start</a></div>
@@ -45,11 +52,11 @@
 
         </div>
         <div class="img" style="position: absolute; top: 80px; right: 46%">
-          <img src="/assets/img/Anni Albers/des Western Regional Archives, Staatsarchiv von North Carolina.jpg" width="200px" alt="Beispielbild" class="hidden-image"></div>
+          <img src="/assets/img/Anni Albers/creative commons/Anni_Albers_wikipedia.jpg" width="200px" alt="Beispielbild" class="hidden-image"></div>
         <div class="imgcredit"><div class="hidden-child">credit: Public domain,
         <br>via Wikimedia Commons</div>
         </div>
-        <div class="editorial4"><p>Als bedeutende Textilkünstlerin und Weberin des 20. Jahrhunderts war sie eng mit der Bauhaus-Bewegung verbunden. Ihre Arbeiten sind der Moderne zuzuordnen, wobei sie das traditionelle Handwerk des Webens mit zeitgenössischer Kunst verband. Albers begann ihre künstlerische Ausbildung 1919 an der Kunstgewerbeschule in Hamburg und setzte sie 1922 am Bauhaus in Weimar fort. Dort spezialisierte sie sich auf Textildesign und entwickelte innovative Webtechniken. Nach der Schließung des Bauhauses emigrierte sie 1933 mit Hilfe von Kontakten mit ihrem Ehemann, dem Künstler Josef Albers, in die USA, wo sie am Black Mountain College in North Carolina lehrte. Ihre gestalterischen Disziplinen umfassten Textildesign, Weberei und später auch Druckgrafik. Sie experimentierte mit Materialien und Techniken, um sowohl funktionale als auch ästhetische Werke zu schaffen. In Bezug auf ihre Moralvorstellungen und historische Einordnung ist zu beachten, dass Albers in einer Zeit des politischen Umbruchs und der Emigration arbeitete. Ihre Flucht aus dem nationalsozialistischen Deutschland und ihre Anpassung an die amerikanische Kultur prägten ihr Werk und ihre Perspektiven.Zu ihren bekanntesten Projekten zählen die sogenannten pictorial weavings, bei denen sie abstrakte Kompositionen in gewebter Form schuf. Ihre Arbeiten wurden in zahlreichen Ausstellungen präsentiert, darunter eine retrospektive Ausstellung in der Kunstsammlung Nordrhein-Westfalen im Jahr 2018. Anni Albers' Werk steht für die Synthese von Kunst und Handwerk und beeinflusst bis heute das Textildesign und die moderne Kunst.</p></div>
+        <div class="editorial4"><p><p style='text-indent: 0px; margin: 0;'>Als bedeutende Textilkünstlerin und Weberin des 20. Jahrhunderts war sie eng mit der Bauhaus-Bewegung verbunden. Ihre Arbeiten sind der Moderne zuzuordnen, wobei sie das traditionelle Handwerk des Webens mit zeitgenössischer Kunst verband.</p> <p style='text-indent: 30px; margin: 0;'> Albers begann ihre künstlerische Ausbildung 1919 an der Kunstgewerbeschule in Hamburg und setzte sie 1922 am Bauhaus in Weimar fort. Dort spezialisierte sie sich auf Textildesign und entwickelte innovative Webtechniken.</p> <p style='text-indent: 30px; margin: 0;'> Nach der Schließung des Bauhauses emigrierte sie 1933 mit Hilfe von Kontakten mit ihrem Ehemann, dem Künstler Josef Albers, in die USA, wo sie am Black Mountain College in North Carolina lehrte.</p> <p style='text-indent: 30px; margin: 0;'> Ihre gestalterischen Disziplinen umfassten Textildesign, Weberei und später auch Druckgrafik. Sie experimentierte mit Materialien und Techniken, um sowohl funktionale als auch ästhetische Werke zu schaffen.</p> <p style='text-indent: 30px; margin: 0;'>In Bezug auf ihre historische Einordnung ist zu beachten, dass Albers in einer Zeit des politischen Umbruchs arbeitete. Ihre Flucht aus dem nationalsozialistischen Deutschland und ihre Anpassung an die amerikanische Kultur prägten ihr Werk und ihre Perspektiven.</p> <p style='text-indent: 30px; margin: 0;'>Zu ihren bekanntesten Projekten zählen die sogenannten pictorial weavings (bsp. Six Prayers), bei denen sie abstrakte Kompositionen in gewebter Form schuf. </p> <p style='text-indent: 30px; margin: 0;'>Ihre Arbeiten wurden in zahlreichen Ausstellungen präsentiert, darunter eine retrospektive Ausstellung in der Kunstsammlung Nordrhein-Westfalen im Jahr 2018. Anni Albers' Werk steht für die Synthese von Kunst und Handwerk und beeinflusst bis heute das Textildesign und die moderne Kunst.</p> </p></div>
         
         </div>
         
@@ -70,6 +77,9 @@
         <div class="img-container4">
         <a href="#img5"><img src="/assets/img/Anni Albers/creative commons/Anni_Albers_(1899–1994),_Design_for_a_Jacquard_Weaving,_1926.jpg" alt="Bild 2"></a>
         </div>
+        <div class="img-container5">
+        <a href="#img6"><img src="/assets/img/Anni Albers/creative commons/Webereiklasse_Webmeister_Kurt_Wanke,_Bauhaus_Dessau.jpg" alt="Bild 2"></a>
+        </div>
 <div id="img1" class="modal">
         <div class="button"><a href="#">X</a></div> 
         <img src="/assets/img/Anni Albers/creative commons/The_Anni_Albers_show_at_Tate_Modern_is_astonishing.jpg" alt="Bild 1">
@@ -80,36 +90,47 @@
 <div id="img2" class="modal">
         <div class="button"><a href="#">X</a></div>      
         <img src="/assets/img/Anni Albers/creative commons/Anni_Albers,_Tapestry,_1948._Handwoven_linen_and.jpg" alt="Bild 1">
-        <h4> fusion von xyz </h4>
+        <!--<h4> fusion von xyz </h4>-->
         </div>
 <div id="img3" class="modal">
         <div class="button"><a href="#">X</a></div> 
         <img src="/assets/img/Anni Albers/creative commons/Anni_Albers_(1899–1994),_Design_for_a_Silk_Tapestry,_1926.jpg" alt="Bild 1">
-       <div class="grid-box-hl"><h6>„Six Prayers“</h6><div class="grid-box-p"><h4><u>Anni Albers, 1966–67</u> <br>
-       Das Kunstwerk aus sechs Stoffbahnen soll an die sechs Millionen ermordeter Juden während des Zweiten Weltkrieges erinnen. <br><br>
-       "Auf internationalen Ausstellungstourneen in Europa und den USA hat das Kunstwerk, dessen schmale Stoffbahnen an jüdische Gebetsschals erinnern, große Aufmerksamkeit erhalten. „Six Prayers“ ist „ein wichtiges Werk über den Holocaust, das die würdige Präsenz eines religiösen Rituals aufweist“, urteilte ein amerikanischer Kunstkritiker.</h4></div></div>
+       <!--<div class="grid-box-hl"><h6>„Design for a Silk Tapestry“</h6><div class="grid-box-p"><h4><u>Anni Albers, 1926</u> <br>
+       </h4></div></div>-->
 </div>
 <div id="img4" class="modal">
         <div class="button"><a href="#">X</a></div> 
         <img src="/assets/img/Anni Albers/creative commons/Anni_Albers_(1899–1994),_Design_for_a_Rug,_1927.jpg" alt="Bild 1">
-       <div class="grid-box-hl"><h6>„Six Prayers“</h6><div class="grid-box-p"><h4><u>Anni Albers, 1966–67</u> <br>
+       <!--<div class="grid-box-hl"><h6>„Six Prayers“</h6><div class="grid-box-p"><h4><u>Anni Albers, 1966–67</u> <br>
        Das Kunstwerk aus sechs Stoffbahnen soll an die sechs Millionen ermordeter Juden während des Zweiten Weltkrieges erinnen. <br><br>
-       "Auf internationalen Ausstellungstourneen in Europa und den USA hat das Kunstwerk, dessen schmale Stoffbahnen an jüdische Gebetsschals erinnern, große Aufmerksamkeit erhalten. „Six Prayers“ ist „ein wichtiges Werk über den Holocaust, das die würdige Präsenz eines religiösen Rituals aufweist“, urteilte ein amerikanischer Kunstkritiker.</h4></div></div>
+       "Auf internationalen Ausstellungstourneen in Europa und den USA hat das Kunstwerk, dessen schmale Stoffbahnen an jüdische Gebetsschals erinnern, große Aufmerksamkeit erhalten. „Six Prayers“ ist „ein wichtiges Werk über den Holocaust, das die würdige Präsenz eines religiösen Rituals aufweist“, urteilte ein amerikanischer Kunstkritiker.</h4></div></div>-->
 </div>
 <div id="img5" class="modal">
         <div class="button"><a href="#">X</a></div>     
         <img src="/assets/img/Anni Albers/creative commons/Anni_Albers_(1899–1994),_Design_for_a_Jacquard_Weaving,_1926.jpg" alt="Bild 1">
-        <div class="grid-box-hl"><h6>„Refuge Tonneau“</h6><div class="grid-box-p"><h4>ein alpines Biwak entworfen in 1938 von Charlotte Perriand und Pierre Jeanneret, gebaut in 2010 vom italienische Label Cassina. Sie erwarben die Rechte an Perriands Nachlass, wodurch es ihnen erlaubt war getreu den Notizen und Skizzen zu bauen. 
-        Gedacht für den Einsatz im gesamten Alpenraum und das Leben unter extremen Bedingungen, finden sich hier 8 Plätz zum Schlafen, Sitzen und Leben. Die Besonderheit: In aller Reduziertheit sind alle nötigen Einrichtungsgegenständige sind vorhanden – Perriand sah stets eine besondere Herausforderung darin, begrenzten Wohnraum funktionell einzurichten.</h4></div>
+        <!--<div class="grid-box-hl"><h6>„Design for a Jacquard Weaving“</h6><div class="grid-box-p"><h4><u>Anni Albers, 1926</u></h4></div>-->
 </div>    
 <div id="img6" class="modal">
         <div class="button"><a href="#">X</a></div>  
-        <img src="/assets/img/Anni Albers/creative commons/Anni_Albers_(1899–1994),_Design_for_a_Jacquard_Weaving,_1926.jpg" alt="Bild 1">
-        <h4> fusion von xyz </h4>
+        <img src="/assets/img/Anni Albers/creative commons/Webereiklasse_Webmeister_Kurt_Wanke,_Bauhaus_Dessau.jpg" alt="Bild 1">
+      <div class="grid-box-p"><h4><u>Gruppenporträt der Webereiklasse Webmeister Kurt Wanke am Bauhaus Dessau. Vordere Reihe von links: Lotte Beese (Lotte Stam-Beese), Anni Albers, Ljuba Monastirsky, Rosa Berger, Gunta Stölzl, Otti Berger, Webmeister Kurt Wanke Obere Reihe von links: Lisbeth Birmann-Oestreicher, Gertrud Preiswerk, Helene Bergner (Léna Meyer-Bergner), Grete (Margaretha) Reichardt.</u> <br><br>
+      „Das große Dilemma ihres Lebens hat Anni Albers selbst einmal auf den Punkt gebracht. ‚Wenn eine Arbeit mit Fäden entsteht, dann wird sie als Handwerk betrachtet; auf Papier wird sie als Kunst angesehen.‘“, so Hannah Pilarczyk 2018 im Spiegel. Denn „obwohl Gründungsdirektor Walter Gropius Gleichbehandlung als Maxime ausgegeben hatte, konnten nur die männlichen Studenten wählen, ob sie sich auf die Arbeit mit Holz, Metall, Ton, Papier oder Glas spezialisieren wollten. Frauen wurde die Textilwerkstatt gewissermaßen zugeteilt.“ Was, wenn Anni Albers, „die sich erst im letzten Drittel ihres Lebens dem Drucken zuwandte, früher zum Papier gefunden hätte?“, spekuliert Pilarzcyk.</h4></div>
         </div>
 </div>                              
 </div>
-<p>„Das große Dilemma ihres Lebens hat Anni Albers selbst einmal auf den Punkt gebracht. ‚Wenn eine Arbeit mit Fäden entsteht, dann wird sie als Handwerk betrachtet; auf Papier wird sie als Kunst angesehen.‘“, so Hannah Pilarczyk 2018 im Spiegel. Denn „obwohl Gründungsdirektor Walter Gropius Gleichbehandlung als Maxime ausgegeben hatte, konnten nur die männlichen Studenten wählen, ob sie sich auf die Arbeit mit Holz, Metall, Ton, Papier oder Glas spezialisieren wollten. Frauen wurde die Textilwerkstatt gewissermaßen zugeteilt.“ Was, wenn Anni Albers, „die sich erst im letzten Drittel ihres Lebens dem Drucken zuwandte, früher zum Papier gefunden hätte?“, spekuliert Pilarzcyk.</p>
+<div class="underconstructionbox-dropdown">
+        <div class="underconstructiontypo">under construction</div>
+        <div class="underconstructionbox-dropdown-content">
+        <h3>under construction</h3>
+        <p>Dieses Projekt wird noch bearbeitet!
+         Das Projekt soll auf „Female Design Positions“ in einem weiterhin männlich dominierten gestalterischem Raum aufmerksam machen. Entstanden ist ein spielerisches digitales Tool, das als Archiv oder zur Recherche genutzt werden kann. Nebst einer kleinen kuratierten Reihe von Positionen sind Benutzer:innen eingeladen, eigene Einträge einzureichen. Ob aus der Bauhausströmung, der Fluxus-Bewegung oder zeitgenössischer Gestaltung – Idee und Ziel ist es das Portal dauerhaft gemeinsam wachsen zu lassen. Reicht gerne eine Position ein, die ihr spannend findet!
+        <a href="mailto:evelyn.marbach@haw-hamburg.de?subject=Einsendung%3A%20Fill%20the%20Gap&body=Hello!%20%3C3%0A%0ASch%C3%B6n%2C%20dass%20Du%20eine%20female%20design%20position%20einreichen%20willst!%20Gemeinsam%20k%C3%B6nnen%20wir%20einen%20Beitrag%20f%C3%BCr%20mehr%20Sichtbarkeit%20leisten!%20%0A%20%0AF%C3%BCr%20das%20Einbinden%20Deiner%20Person%20in%20die%20Seitenstruktur%20ben%C3%B6tige%20ich%20folgende%20Angaben%20zur%20Person%3A%0A%0AfirstName%3A%20%0AlastName%3A%20%0Ayears%3A%20(hier%20die%20Lebzeiten)%0Aimage%3A%20(Bitte%20nur%20Bilder%20einreichen%20mit%20creative%20common%20license%20oder%20bereits%20f%C3%BCr%20den%20Nutzungskontext%20angefragte%20Bilder)%20%0Acredit%3A%20(Credit%20der%20Bilder)%0Adescription%3A%20!%20(Zeichenunbegrenzte%20Beschreibung%20zur%20Person%2C%20gerne%20mit%20Quellenangabe)%0Adiscipline%3A%20(hier%20die%20kreativen%20Schwerpunkte%20nennen.%20Gerne%20auch%20mehrere)%0A%0AIch%20freue%20mich%20auf%20Deine%20Nachricht!%0A%0ASonnige%20Gr%C3%BC%C3%9Fe%2C%0A%CC%B2%CC%B2e%CC%B2%CC%B2v%CC%B2%CC%B2i%CC%B2%CC%B2">
+        <div class="button">E-Mail senden</div></a></p>
+        </div>
+        <svg id="Ebene_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 862 453">
+    <defs><style>.cls-1{fill:none;stroke:var(--color-2);;stroke-miterlimit:10;stroke-width:8px;}</style></defs>
+                <path class="cls-1" d="M588.78,93.67c-130.74-28.64-267.11-31.31-398.87-7.82-33.96,6.05-68.51,14.2-97.04,33.59-28.53,19.39-50.12,52.3-47.18,86.67,3.63,42.35,41.25,73.11,78.01,94.45,94.21,54.71,203.45,82.1,312.4,82.69,108.94.59,217.47-25.23,316.41-70.83,16.31-7.52,32.63-15.74,45.81-27.94,13.19-12.2,23.05-29.01,23.25-46.97.3-27.34-21.03-50.01-43.41-65.72-61.46-43.16-138.55-57.11-213.38-63.5-76.1-6.49-152.77-6.29-228.83.59-49.93,4.52-101.25,12.49-143.78,39.03"/>
+                </svg>
 </p>
         
         </div>

@@ -11,7 +11,14 @@
 
   </head>
 <body>
-  
+  <script>
+    document.addEventListener("click", function(event) {
+        const iframe = document.querySelector("iframe");
+        if (iframe && !iframe.contains(event.target)) {
+            iframe.src = iframe.src; // Stoppt den iframe, indem er neu geladen wird
+        }
+    });
+    </script>
     <header>
       <div class="button"><a href="/index.html">
         start</a></div>
@@ -45,15 +52,27 @@
         <div class="imgcredit"><div class="hidden-child">credit: Public domain,
         <br>via Wikimedia Commons</div>
         </div>
-        <div class="editorial4"><p>Alison Knowles geboren 1933 ist eine amerikanische Künstlerin und eine der prägenden Persönlichkeiten der Fluxus-Bewegung. In ihren Arbeiten verschmelzen Kunst und Leben auf poetische Weise, wobei sie alltägliche Materialien und Handlungen in den Fokus rückt. Bekannt für ihre interdisziplinären Werke, reichen ihre Werke von Performances über Buchkunst bis hin zu Installationen.
-Eine ihrer ikonischen Arbeiten, „Make a Salad“ (1962), ist ein Paradebeispiel für ihre Fähigkeit, das Banale in ein sinnliches Erlebnis zu verwandeln. In dieser partizipativen Performance zerkleinert sie gemeinsam mit dem Publikum Zutaten und serviert einen frischen Salat – eine simple Geste, die zu einem kollektiven Kunstwerk wird. 
-Ihre Arbeiten hinterfragen die Grenzen zwischen künstlerischem Objekt und alltäglicher Erfahrung und fordern dazu auf, die Welt mit einem frischen, spielerischen Blick zu betrachten.
-Alison Knowles Werk ist auch eine Einladung zur Achtsamkeit, zur Entdeckung des Poetischen im Gewöhnlichen und zur aktiven Teilhabe. Ihre Kunst ist keine abgeschlossene Erzählung, sondern ein lebendiger Prozess, der sich mit jeder Begegnung neu entfaltet.</p></div>
+        <div class="editorial4"><p><p style='text-indent: 0px; margin: 0;'>Alison Knowles geboren 1933 ist eine amerikanische Künstlerin und eine der prägenden Persönlichkeiten der Fluxus-Bewegung.</p> <p style='text-indent: 30px; margin: 0;'>In ihren Arbeiten verschmelzen Kunst und Leben auf poetische Weise, wobei sie alltägliche Materialien und Handlungen in den Fokus rückt. Bekannt für ihre interdisziplinären Werke, reichen ihre Werke von Performances über Buchkunst bis hin zu Installationen. </p> <p style='text-indent: 30px; margin: 0;'>Eine ihrer ikonischen Arbeiten, „Make a Salad“ (1962), ist ein Paradebeispiel für ihre Fähigkeit, das Banale in ein sinnliches Erlebnis zu verwandeln. In dieser partizipativen Performance zerkleinert sie gemeinsam mit dem Publikum Zutaten und serviert einen frischen Salat während ein Orchester musikalisch untermalt – eine simple Geste, die zu einem kollektiven Kunstwerk wird. </p> <p style='text-indent: 30px; margin: 0;'>Ihre Arbeiten hinterfragen die Grenzen zwischen künstlerischem Objekt und alltäglicher Erfahrung und fordern dazu auf, die Welt mit einem frischen, spielerischen Blick zu betrachten. </p> <p style='text-indent: 30px; margin: 0;'>Alison Knowles Werk ist auch eine Einladung zur Achtsamkeit, zur Entdeckung des Poetischen im Gewöhnlichen und zur aktiven Teilhabe. Ihre Kunst ist keine abgeschlossene Erzählung, sondern ein lebendiger Prozess, der sich mit jeder Begegnung neu entfaltet.</p></p></div>
         
         </div>
         
         <div class="bookright">
         <p><div class="grid-container">   
+        <div class="img-container">
+        <a href="#img1"><img src="/assets/img/Alison Knowles/Creative Commons/1024px-Alison_Knowles,_The_House_of_Dust.jpg" alt="Bild 1"></a>
+        </div>
+ <div id="img1" class="modal">
+        <div class="button"><a href="#">X</a></div> 
+        <img src="/assets/img/Alison Knowles/Creative Commons/1024px-Alison_Knowles,_The_House_of_Dust.jpg" alt="Bild 1">
+       <div class="grid-box-hl"><h6>„The House of Dust“</h6><div class="grid-box-p"><h4><u>Alison Knowles, 2021, 3D Druck</u> Wiesbaden Kranzplatz – temporäre Ausstellung vom 26. Juni – 26. September 2021 <br>
+       </h4>
+       <iframe src="https://www.youtube.com/embed/zF6oJj17LtU?si=Sf7X4zRPCI4xGKmV" 
+            style="position: absolute; bottom: 10%; right: 4%; width: 30vw; height: 30vh;" 
+            frameborder="0" allowfullscreen>
+    </iframe>
+    </div>
+</div>
+</div>
     <div class="underconstructionbox-dropdown">
         <div class="underconstructiontypo">under construction</div>
         <div class="underconstructionbox-dropdown-content">

@@ -11,7 +11,14 @@
 
   </head>
 <body>
-  
+  <script>
+    document.addEventListener("click", function(event) {
+        const iframe = document.querySelector("iframe");
+        if (iframe && !iframe.contains(event.target)) {
+            iframe.src = iframe.src; // Stoppt den iframe, indem er neu geladen wird
+        }
+    });
+    </script>
     <header>
       <div class="button"><a href="/index.html">
         start</a></div>
@@ -22,13 +29,13 @@
         <div class="bookcontainer">
         <div class="bookleft">
           <h3>Eileen <br> Gray</h3>
-          <h3>1878-1976 </h3>
+          <h3>1878–1976 </h3>
           
          <div class="discipline">
          
+          <div class="button"><a href="/social-design/">furniture design</a></div>
           
           
-          <div class="button"><a href="/social-design/">social design</a></div>
           
 
           
@@ -49,43 +56,55 @@
         <div class="imgcredit"><div class="hidden-child">credit: Public domain,
         <br>via Wikimedia Commons</div>
         </div>
-        <div class="editorial4"><p></p></div>
+        <div class="editorial4"><p><p style='text-indent: 0px; margin: 0;'>Die irische Designerin und Architektin Eileen Gray wurde 1878 als Tochter einer schottisch-irischen Adelsfamilie geboren und studierte von 1898 bis 1902 als eine der ersten Frauen an der Slade School of Art in London. Nach ihrem Studium in London und Paris begann sie ihre Laufbahn mit der Gestaltung von Lackmöbeln und entwickelte später funktionale Möbel und Gebäude.</p> <p style='text-indent: 30px; margin: 0;'>Ihr bekanntestes Werk ist das Haus E.1027 an der Côte d’Azur, das sie gemeinsam mit dem Architekten Jean Badovici entwarf. Es steht für ihren Ansatz, Architektur und Möbeldesign zu verbinden und Räume funktional und flexibel zu gestalten. Möbel wie der höhenverstellbare Tisch E.1027 und der Bibendum Chair zählen zu den Klassikern des modernen Designs. </p></p></div>
         
         </div>
         
         <div class="bookright">
         <p><div class="grid-container">
-    <div class="img-container">
-        <a href="#img1"><img src="/assets/img/Eileen Gray/creative commons/1024px-Glass_Salon_by_Paul_Ruaud_and_Eileen_Gray.jpg" alt="Bild 1"></a>
+   <div class="img-container">
+        <a href="#img1"><img src="/assets/img/Eileen Gray/creative commons/Jean_desert_Laden.jpeg" alt="Bild 1"></a>
     </div>
-    <div class="img-container">
+    <div class="img-container1">
         <a href="#img2"><img src="/assets/img/Eileen Gray/creative commons/Eileen-gray-e1027-table.png" alt="Bild 2"></a>
     </div>
-    <div class="img-container">
+    <div class="img-container2">
         <a href="#img3"><img src="/assets/img/Eileen Gray/creative commons/E.1027,_Roquebrune-Cap-Martin_(September_2016).jpg" alt="Bild 3"></a>
     </div>
 </div>
 <div id="img1" class="modal">
     <a href="#" class="button">X</a>   
-    <img src="/assets/img/Eileen Gray/creative commons/1024px-Glass_Salon_by_Paul_Ruaud_and_Eileen_Gray.jpg" alt="Bild 1">
-    <div class="grid-box-hl"><h6>Bamboo Chaise Longue</h6></div>
-    <div class="grid-box-p"><h4><u> Charlotte Perriand, 1940</u> <br> wood and bamboo strips, seen in Musée des Arts Décoratifs in Paris</h4></div>
+    <img src="/assets/img/Eileen Gray/creative commons/Jean_desert_Laden.jpeg" alt="Bild 1">
+    <div class="grid-box-hl"><h6>Ladenfront Galerie Jean Desert</h6></div>
+    <div class="grid-box-p"><h4><u> 1922</u> <br> Zusammen mit Evelyn Wyld gründete sie 1922 unter dem Pseudonym Jean Désert ein Geschäft in Paris, in dem sie ihre Entwürfe ausstellte und verkaufte. (smow.de/eileengray)</h4></div>
 </div>
 <div id="img2" class="modal">
     <a href="#" class="button">X</a>     
     <img src="/assets/img/Eileen Gray/creative commons/Eileen-gray-e1027-table.jpg" alt="Bild 2">
     <div class="grid-box-hl"><h6>E.1027</h6></div>
-    <div class="grid-box-p"><h4><u> Eileen Gray Le Corbusier, Pierre Jeanneret, 1930</u> <br>chrome plated tubular steel and leather cushions <br><br>Der Stuhl war als Arbeits- oder Konferenzstuhl gedacht, weshalb er sich um die eigene Achse drehen lässt (Swivel-Funktion). In den 1920er Jahren war diese Art der Mechanik für Wohnmöbel ungewöhnlich und eher im Büro- oder Industriemöbeldesign zu finden. </h4></div>
+    <div class="grid-box-p"><h4><u></u> E.1027 ist ein höhenverstellbarer Beistelltisch und ist Grays bekanntester Produktentwurf, der mittlerweile als Design-Klassiker gilt.</h4></div>
 </div>
 <div id="img3" class="modal">
     <a href="#" class="button">X</a>      
     <img src="/assets/img/Eileen Gray/creative commons/E.1027,_Roquebrune-Cap-Martin_(September_2016).jpg" alt="Bild 3">
     <div class="grid-box-hl"><h6>E.1027</h6></div>
-    <div class="grid-box-p"><h4><u>Charlotte Perriand, Pierre Jeanneretein, Entwurf 1938 </u><br> Der Name ist ein Code-Kürzel aus E für Eileen, 10 für Jean (der zehnte Buchstabe des Alphabets), 2 für Badovici und 7 für Gray. Mit einem L-förmigen Grundriss, einem Flachdach und raumhohen Fenstern ausgestattet, entstand ein sowohl rational in sich geschlossener als auch ein sich der Umgebung öffnender beispielhafter Bau der internationalen Moderne.</h4>
+    <div class="grid-box-p"><h4><u> Eileen Gray, Jean Badovici, 1929, Der Name ist ein Code-Kürzel aus E für Eileen, 10 für Jean (der zehnte Buchstabe des Alphabets), 2 für Badovici und 7 für Gray. </u>  <br>Nachdem Gray das Haus Badovici überlassen hatte, ermöglichte dieser Le Corbusier den Zugang. Le Corbusier malte mehrere Wandbilder mit Motiven, die Grays minimalistisches Design überdeckten ... </h4>
     </div>
 </div>
 </div>
-</p>
+<div class="underconstructionbox-dropdown">
+        <div class="underconstructiontypo">under construction</div>
+        <div class="underconstructionbox-dropdown-content">
+        <h3>under construction</h3>
+        <p>Dieses Projekt wird noch bearbeitet!
+         Das Projekt soll auf „Female Design Positions“ in einem weiterhin männlich dominierten gestalterischem Raum aufmerksam machen. Entstanden ist ein spielerisches digitales Tool, das als Archiv oder zur Recherche genutzt werden kann. Nebst einer kleinen kuratierten Reihe von Positionen sind Benutzer:innen eingeladen, eigene Einträge einzureichen. Ob aus der Bauhausströmung, der Fluxus-Bewegung oder zeitgenössischer Gestaltung – Idee und Ziel ist es das Portal dauerhaft gemeinsam wachsen zu lassen. Reicht gerne eine Position ein, die ihr spannend findet!
+        <a href="mailto:evelyn.marbach@haw-hamburg.de?subject=Einsendung%3A%20Fill%20the%20Gap&body=Hello!%20%3C3%0A%0ASch%C3%B6n%2C%20dass%20Du%20eine%20female%20design%20position%20einreichen%20willst!%20Gemeinsam%20k%C3%B6nnen%20wir%20einen%20Beitrag%20f%C3%BCr%20mehr%20Sichtbarkeit%20leisten!%20%0A%20%0AF%C3%BCr%20das%20Einbinden%20Deiner%20Person%20in%20die%20Seitenstruktur%20ben%C3%B6tige%20ich%20folgende%20Angaben%20zur%20Person%3A%0A%0AfirstName%3A%20%0AlastName%3A%20%0Ayears%3A%20(hier%20die%20Lebzeiten)%0Aimage%3A%20(Bitte%20nur%20Bilder%20einreichen%20mit%20creative%20common%20license%20oder%20bereits%20f%C3%BCr%20den%20Nutzungskontext%20angefragte%20Bilder)%20%0Acredit%3A%20(Credit%20der%20Bilder)%0Adescription%3A%20!%20(Zeichenunbegrenzte%20Beschreibung%20zur%20Person%2C%20gerne%20mit%20Quellenangabe)%0Adiscipline%3A%20(hier%20die%20kreativen%20Schwerpunkte%20nennen.%20Gerne%20auch%20mehrere)%0A%0AIch%20freue%20mich%20auf%20Deine%20Nachricht!%0A%0ASonnige%20Gr%C3%BC%C3%9Fe%2C%0A%CC%B2%CC%B2e%CC%B2%CC%B2v%CC%B2%CC%B2i%CC%B2%CC%B2">
+        <div class="button">E-Mail senden</div></a></p>
+        </div>
+        <svg id="Ebene_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 862 453">
+    <defs><style>.cls-1{fill:none;stroke:var(--color-2);;stroke-miterlimit:10;stroke-width:8px;}</style></defs>
+                <path class="cls-1" d="M588.78,93.67c-130.74-28.64-267.11-31.31-398.87-7.82-33.96,6.05-68.51,14.2-97.04,33.59-28.53,19.39-50.12,52.3-47.18,86.67,3.63,42.35,41.25,73.11,78.01,94.45,94.21,54.71,203.45,82.1,312.4,82.69,108.94.59,217.47-25.23,316.41-70.83,16.31-7.52,32.63-15.74,45.81-27.94,13.19-12.2,23.05-29.01,23.25-46.97.3-27.34-21.03-50.01-43.41-65.72-61.46-43.16-138.55-57.11-213.38-63.5-76.1-6.49-152.77-6.29-228.83.59-49.93,4.52-101.25,12.49-143.78,39.03"/>
+                </svg></p>
         
         </div>
     </main>

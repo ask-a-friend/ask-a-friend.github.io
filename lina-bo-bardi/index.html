@@ -11,7 +11,14 @@
 
   </head>
 <body>
-  
+  <script>
+    document.addEventListener("click", function(event) {
+        const iframe = document.querySelector("iframe");
+        if (iframe && !iframe.contains(event.target)) {
+            iframe.src = iframe.src; // Stoppt den iframe, indem er neu geladen wird
+        }
+    });
+    </script>
     <header>
       <div class="button"><a href="/index.html">
         start</a></div>
